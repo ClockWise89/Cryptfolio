@@ -7,5 +7,7 @@ target 'Cryptfolio' do
 
   # Pods for Cryptfolio
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'CocoaLumberjack/Swift'
 
 end
