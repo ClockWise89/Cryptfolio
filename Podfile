@@ -6,5 +6,6 @@ target 'Cryptfolio' do
   use_frameworks!
 
   # Pods for Cryptfolio
+  pod 'Firebase/Core'
 
 end
