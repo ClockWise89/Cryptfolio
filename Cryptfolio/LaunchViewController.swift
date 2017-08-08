@@ -9,22 +9,36 @@
 import UIKit
 import Firebase
 import CocoaLumberjack
+import FirebaseAuth
 
 class LaunchViewController: UIViewController {
 
+    var authHandler: Auth!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+        self.authHandler = Auth.auth()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        // If we do not have a stored token -> Go to LoginViewController
-        DDLogDebug("Token was not found. Will show LoginViewController")
-        self.performSegue(withIdentifier: "showLogin", sender: nil)
+        self.authHandler.addStateDidChangeListener { (auth, user) in
+            if auth.currentUser != nil {
+                DDLogDebug("User is logged in.")
+                
+                self.performSegue(withIdentifier: "showLoggedIn", sender: nil)
+            
+            } else {
+                self.performSegue(withIdentifier: "showLogin", sender: nil)
+            }
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.authHandler.removeStateDidChangeListener(self.authHandler)
+        self.authHandler = nil
     }
 }
 

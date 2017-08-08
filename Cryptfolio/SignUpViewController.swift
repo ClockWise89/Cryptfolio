@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  SignUpViewController.swift
 //  Cryptfolio
 //
 //  Created by Christopher Eliasson on 2017-08-08.
@@ -7,13 +7,14 @@
 //
 
 import UIKit
-import CocoaLumberjack
 import FirebaseAuth
+import CocoaLumberjack
 
-class LoginViewController: UIViewController {
+class SignUpViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
     
     var authHandler: Auth!
     
@@ -21,7 +22,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.authHandler = Auth.auth()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -29,8 +30,6 @@ class LoginViewController: UIViewController {
             if user != nil {
                 DDLogDebug("User was successfully logged in.")
                 self.performSegue(withIdentifier: "showLoggedIn", sender: nil)
-            } else {
-                DDLogDebug("User needs to login.")
             }
         }
     }
@@ -43,15 +42,21 @@ class LoginViewController: UIViewController {
     
     private func createUser(email: String, password: String) {
         
-        DDLogDebug("Logging in...")
-        self.authHandler.signIn(withEmail: email, password: password) { (user, error) in
-            if user != nil {
-                DDLogDebug("Signing in successful.")
+        self.authHandler.createUser(withEmail: email, password: password) { (user, error) in
+            if error != nil {
+                DDLogError("Create new user failed with error: \(String(describing: error == nil ? "Reason unknown" : error!.localizedDescription ))")
+                
             } else {
-                DDLogError("Signing in unsuccessful: \(String(describing: error == nil ? "Reason unknown" : error!.localizedDescription ))")
+                DDLogInfo("User was successfully created")
+                
+                if user != nil {
+                    Auth.auth().signIn(withEmail: email, password: password)
+                    DDLogDebug("Logging in after registration...")
+                } else {
+                    DDLogError("User was created, but was not logged in.")
+                }
             }
         }
-        
     }
     
     @IBAction func donePressed(_ sender: Any) {
