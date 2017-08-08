@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8FCA4A51B21295B7E8727767 /* Pods_Cryptfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B724B25340132560932538 /* Pods_Cryptfolio.framework */; };
 		9D3FCF6B1F3A18A400FBBB93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FCF6A1F3A18A400FBBB93 /* AppDelegate.swift */; };
 		9D3FCF6D1F3A18A400FBBB93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FCF6C1F3A18A400FBBB93 /* ViewController.swift */; };
 		9D3FCF701F3A18A400FBBB93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF6E1F3A18A400FBBB93 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		85CBB6CEF5928E319F071390 /* Pods-Cryptfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptfolio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio.debug.xcconfig"; sourceTree = "<group>"; };
 		9D3FCF671F3A18A400FBBB93 /* Cryptfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3FCF6A1F3A18A400FBBB93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D3FCF6C1F3A18A400FBBB93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D3FCF741F3A18A400FBBB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D3FCF761F3A18A400FBBB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAF4F148534DF5A0D4CE789A /* Pods-Cryptfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptfolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio.release.xcconfig"; sourceTree = "<group>"; };
+		D3B724B25340132560932538 /* Pods_Cryptfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FCA4A51B21295B7E8727767 /* Pods_Cryptfolio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		434A6FBEA53F6BF8EFEABA60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85CBB6CEF5928E319F071390 /* Pods-Cryptfolio.debug.xcconfig */,
+				BAF4F148534DF5A0D4CE789A /* Pods-Cryptfolio.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		93D7125C8D3ADC4BD3FA2B5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3B724B25340132560932538 /* Pods_Cryptfolio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9D3FCF5E1F3A18A300FBBB93 = {
 			isa = PBXGroup;
 			children = (
 				9D3FCF691F3A18A400FBBB93 /* Cryptfolio */,
 				9D3FCF681F3A18A400FBBB93 /* Products */,
+				434A6FBEA53F6BF8EFEABA60 /* Pods */,
+				93D7125C8D3ADC4BD3FA2B5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D3FCF791F3A18A400FBBB93 /* Build configuration list for PBXNativeTarget "Cryptfolio" */;
 			buildPhases = (
+				7D59BBB855A2839C8314D233 /* [CP] Check Pods Manifest.lock */,
 				9D3FCF631F3A18A400FBBB93 /* Sources */,
 				9D3FCF641F3A18A400FBBB93 /* Frameworks */,
 				9D3FCF651F3A18A400FBBB93 /* Resources */,
+				D5ECAD228AEC87C8DA9D8C8F /* [CP] Embed Pods Frameworks */,
+				5CEB961AD61CD2E9DAA5ADD0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5CEB961AD61CD2E9DAA5ADD0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D59BBB855A2839C8314D233 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cryptfolio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5ECAD228AEC87C8DA9D8C8F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9D3FCF631F3A18A400FBBB93 /* Sources */ = {
@@ -259,6 +337,7 @@
 		};
 		9D3FCF7A1F3A18A400FBBB93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85CBB6CEF5928E319F071390 /* Pods-Cryptfolio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 27UAPUZGLR;
@@ -272,6 +351,7 @@
 		};
 		9D3FCF7B1F3A18A400FBBB93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAF4F148534DF5A0D4CE789A /* Pods-Cryptfolio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 27UAPUZGLR;
