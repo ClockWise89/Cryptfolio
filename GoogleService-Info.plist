@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>233873297113-96p4rhc7vl2qm91jjs2muduhvf9roj61.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.233873297113-96p4rhc7vl2qm91jjs2muduhvf9roj61</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC_Q7hPQaNE1VBVw_s9gH16Hb_ZqwshkZ0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>233873297113</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>dev.christopher.Cryptfolio</string>
+	<key>PROJECT_ID</key>
+	<string>cryptfolio-ceb90</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cryptfolio-ceb90.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:233873297113:ios:e6439dfb00a612d2</string>
+	<key>DATABASE_URL</key>
+	<string>https://cryptfolio-ceb90.firebaseio.com</string>
+</dict>
+</plist>

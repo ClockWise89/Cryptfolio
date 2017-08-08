@@ -13,6 +13,7 @@
 		9D3FCF701F3A18A400FBBB93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF6E1F3A18A400FBBB93 /* Main.storyboard */; };
 		9D3FCF721F3A18A400FBBB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */; };
 		9D3FCF751F3A18A400FBBB93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF731F3A18A400FBBB93 /* LaunchScreen.storyboard */; };
+		9DEEBB291F3A1BB400CA0466 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DEEBB281F3A1BB400CA0466 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D3FCF741F3A18A400FBBB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D3FCF761F3A18A400FBBB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DEEBB281F3A1BB400CA0466 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		BAF4F148534DF5A0D4CE789A /* Pods-Cryptfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptfolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio.release.xcconfig"; sourceTree = "<group>"; };
 		D3B724B25340132560932538 /* Pods_Cryptfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,6 +80,7 @@
 		9D3FCF691F3A18A400FBBB93 /* Cryptfolio */ = {
 			isa = PBXGroup;
 			children = (
+				9DEEBB281F3A1BB400CA0466 /* GoogleService-Info.plist */,
 				9D3FCF6A1F3A18A400FBBB93 /* AppDelegate.swift */,
 				9D3FCF6C1F3A18A400FBBB93 /* ViewController.swift */,
 				9D3FCF6E1F3A18A400FBBB93 /* Main.storyboard */,
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D3FCF751F3A18A400FBBB93 /* LaunchScreen.storyboard in Resources */,
+				9DEEBB291F3A1BB400CA0466 /* GoogleService-Info.plist in Resources */,
 				9D3FCF721F3A18A400FBBB93 /* Assets.xcassets in Resources */,
 				9D3FCF701F3A18A400FBBB93 /* Main.storyboard in Resources */,
 			);
@@ -199,9 +203,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
