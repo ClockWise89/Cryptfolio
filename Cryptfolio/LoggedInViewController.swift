@@ -17,16 +17,12 @@ class LoggedInViewController: UIViewController {
         self.view.backgroundColor = UIColor.blue
     }
     
-    
     @IBAction func logoutPressed(_ sender: Any) {
-        do {
-            try Auth.auth().signOut()
-            DDLogError("Signing out.")
-            self.performSegue(withIdentifier: "showLogin", sender: nil)
-            
-        } catch let signOutError as NSError {
-            DDLogError("There was an error signing out: \(signOutError.debugDescription)")
+        AuthenticationManager.shared.signOut() { (success) in
+            if success {
+                self.performSegue(withIdentifier: "showLogin", sender: nil)
+                // Do clean up
+            }
         }
     }
-
 }

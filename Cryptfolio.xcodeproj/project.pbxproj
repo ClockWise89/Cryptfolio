@@ -17,6 +17,7 @@
 		9DEEBB2D1F3A24C900CA0466 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEEBB2C1F3A24C900CA0466 /* SignUpViewController.swift */; };
 		9DEEBB2F1F3A389D00CA0466 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEEBB2E1F3A389D00CA0466 /* LoginViewController.swift */; };
 		9DEEBB311F3A38BD00CA0466 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEEBB301F3A38BD00CA0466 /* LoggedInViewController.swift */; };
+		9DEEBB331F3A51C900CA0466 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEEBB321F3A51C900CA0466 /* AuthenticationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9DEEBB2C1F3A24C900CA0466 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9DEEBB2E1F3A389D00CA0466 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9DEEBB301F3A38BD00CA0466 /* LoggedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
+		9DEEBB321F3A51C900CA0466 /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		BAF4F148534DF5A0D4CE789A /* Pods-Cryptfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptfolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio.release.xcconfig"; sourceTree = "<group>"; };
 		D3B724B25340132560932538 /* Pods_Cryptfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 				9DEEBB2C1F3A24C900CA0466 /* SignUpViewController.swift */,
 				9DEEBB2E1F3A389D00CA0466 /* LoginViewController.swift */,
 				9DEEBB301F3A38BD00CA0466 /* LoggedInViewController.swift */,
+				9DEEBB321F3A51C900CA0466 /* AuthenticationManager.swift */,
 			);
 			path = Cryptfolio;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				9DEEBB2F1F3A389D00CA0466 /* LoginViewController.swift in Sources */,
 				9DEEBB311F3A38BD00CA0466 /* LoggedInViewController.swift in Sources */,
 				9DEEBB2D1F3A24C900CA0466 /* SignUpViewController.swift in Sources */,
+				9DEEBB331F3A51C900CA0466 /* AuthenticationManager.swift in Sources */,
 				9D3FCF6D1F3A18A400FBBB93 /* LaunchViewController.swift in Sources */,
 				9D3FCF6B1F3A18A400FBBB93 /* AppDelegate.swift in Sources */,
 			);

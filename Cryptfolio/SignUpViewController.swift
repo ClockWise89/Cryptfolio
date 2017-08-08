@@ -7,28 +7,18 @@
 //
 
 import UIKit
-import FirebaseAuth
 import CocoaLumberjack
 
 class SignUpViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
-    
-    var authHandler: Auth!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.authHandler = Auth.auth()
-    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.authHandler.addStateDidChangeListener { (auth, user) in
-            if user != nil {
-                DDLogDebug("User was successfully logged in.")
+        AuthenticationManager.shared.addStateListener() { (success) in
+            if success {
                 self.performSegue(withIdentifier: "showLoggedIn", sender: nil)
             }
         }
@@ -36,27 +26,7 @@ class SignUpViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.authHandler.removeStateDidChangeListener(self.authHandler)
-        self.authHandler = nil
-    }
-    
-    private func createUser(email: String, password: String) {
-        
-        self.authHandler.createUser(withEmail: email, password: password) { (user, error) in
-            if error != nil {
-                DDLogError("Create new user failed with error: \(String(describing: error == nil ? "Reason unknown" : error!.localizedDescription ))")
-                
-            } else {
-                DDLogInfo("User was successfully created")
-                
-                if user != nil {
-                    Auth.auth().signIn(withEmail: email, password: password)
-                    DDLogDebug("Logging in after registration...")
-                } else {
-                    DDLogError("User was created, but was not logged in.")
-                }
-            }
-        }
+        AuthenticationManager.shared.removeStateListener()
     }
     
     @IBAction func donePressed(_ sender: Any) {
@@ -65,6 +35,6 @@ class SignUpViewController: UIViewController {
             return
         }
         
-        self.createUser(email: email, password: password)
+        AuthenticationManager.shared.createUser(email: email, password: password)
     }
 }
