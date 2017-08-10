@@ -7,25 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C0ACA0B1F3CA8B80085FA64 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA041F3CA8B80085FA64 /* AuthenticationManager.swift */; };
+		7C0ACA0C1F3CA8B80085FA64 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA071F3CA8B80085FA64 /* LaunchViewController.swift */; };
+		7C0ACA0D1F3CA8B80085FA64 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA081F3CA8B80085FA64 /* LoggedInViewController.swift */; };
+		7C0ACA0E1F3CA8B80085FA64 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA091F3CA8B80085FA64 /* LoginViewController.swift */; };
+		7C0ACA0F1F3CA8B80085FA64 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA0A1F3CA8B80085FA64 /* SignUpViewController.swift */; };
 		8FCA4A51B21295B7E8727767 /* Pods_Cryptfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B724B25340132560932538 /* Pods_Cryptfolio.framework */; };
 		9D3FCF6B1F3A18A400FBBB93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FCF6A1F3A18A400FBBB93 /* AppDelegate.swift */; };
-		9D3FCF6D1F3A18A400FBBB93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FCF6C1F3A18A400FBBB93 /* ViewController.swift */; };
-		9D3FCF701F3A18A400FBBB93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF6E1F3A18A400FBBB93 /* Main.storyboard */; };
 		9D3FCF721F3A18A400FBBB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */; };
 		9D3FCF751F3A18A400FBBB93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF731F3A18A400FBBB93 /* LaunchScreen.storyboard */; };
 		9DEEBB291F3A1BB400CA0466 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DEEBB281F3A1BB400CA0466 /* GoogleService-Info.plist */; };
+		9DEEBB2B1F3A23DE00CA0466 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DEEBB2A1F3A23DE00CA0466 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C0ACA041F3CA8B80085FA64 /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		7C0ACA071F3CA8B80085FA64 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		7C0ACA081F3CA8B80085FA64 /* LoggedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
+		7C0ACA091F3CA8B80085FA64 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7C0ACA0A1F3CA8B80085FA64 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		85CBB6CEF5928E319F071390 /* Pods-Cryptfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptfolio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio.debug.xcconfig"; sourceTree = "<group>"; };
 		9D3FCF671F3A18A400FBBB93 /* Cryptfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3FCF6A1F3A18A400FBBB93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9D3FCF6C1F3A18A400FBBB93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9D3FCF6F1F3A18A400FBBB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D3FCF741F3A18A400FBBB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D3FCF761F3A18A400FBBB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DEEBB281F3A1BB400CA0466 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		9DEEBB2A1F3A23DE00CA0466 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BAF4F148534DF5A0D4CE789A /* Pods-Cryptfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptfolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio.release.xcconfig"; sourceTree = "<group>"; };
 		D3B724B25340132560932538 /* Pods_Cryptfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -49,6 +57,44 @@
 				BAF4F148534DF5A0D4CE789A /* Pods-Cryptfolio.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		7C0ACA031F3CA8B80085FA64 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7C0ACA041F3CA8B80085FA64 /* AuthenticationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		7C0ACA051F3CA8B80085FA64 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7C0ACA061F3CA8B80085FA64 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7C0ACA071F3CA8B80085FA64 /* LaunchViewController.swift */,
+				7C0ACA081F3CA8B80085FA64 /* LoggedInViewController.swift */,
+				7C0ACA091F3CA8B80085FA64 /* LoginViewController.swift */,
+				7C0ACA0A1F3CA8B80085FA64 /* SignUpViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7C0ACA101F3CA8C20085FA64 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9DEEBB281F3A1BB400CA0466 /* GoogleService-Info.plist */,
+				9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */,
+				9D3FCF731F3A18A400FBBB93 /* LaunchScreen.storyboard */,
+				9D3FCF761F3A18A400FBBB93 /* Info.plist */,
+				9DEEBB2A1F3A23DE00CA0466 /* Main.storyboard */,
+			);
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		93D7125C8D3ADC4BD3FA2B5C /* Frameworks */ = {
@@ -80,13 +126,11 @@
 		9D3FCF691F3A18A400FBBB93 /* Cryptfolio */ = {
 			isa = PBXGroup;
 			children = (
-				9DEEBB281F3A1BB400CA0466 /* GoogleService-Info.plist */,
+				7C0ACA101F3CA8C20085FA64 /* SupportingFiles */,
+				7C0ACA031F3CA8B80085FA64 /* Managers */,
+				7C0ACA051F3CA8B80085FA64 /* Models */,
+				7C0ACA061F3CA8B80085FA64 /* ViewControllers */,
 				9D3FCF6A1F3A18A400FBBB93 /* AppDelegate.swift */,
-				9D3FCF6C1F3A18A400FBBB93 /* ViewController.swift */,
-				9D3FCF6E1F3A18A400FBBB93 /* Main.storyboard */,
-				9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */,
-				9D3FCF731F3A18A400FBBB93 /* LaunchScreen.storyboard */,
-				9D3FCF761F3A18A400FBBB93 /* Info.plist */,
 			);
 			path = Cryptfolio;
 			sourceTree = "<group>";
@@ -157,7 +201,7 @@
 				9D3FCF751F3A18A400FBBB93 /* LaunchScreen.storyboard in Resources */,
 				9DEEBB291F3A1BB400CA0466 /* GoogleService-Info.plist in Resources */,
 				9D3FCF721F3A18A400FBBB93 /* Assets.xcassets in Resources */,
-				9D3FCF701F3A18A400FBBB93 /* Main.storyboard in Resources */,
+				9DEEBB2B1F3A23DE00CA0466 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,11 +248,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -224,22 +272,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D3FCF6D1F3A18A400FBBB93 /* ViewController.swift in Sources */,
+				7C0ACA0F1F3CA8B80085FA64 /* SignUpViewController.swift in Sources */,
 				9D3FCF6B1F3A18A400FBBB93 /* AppDelegate.swift in Sources */,
+				7C0ACA0C1F3CA8B80085FA64 /* LaunchViewController.swift in Sources */,
+				7C0ACA0B1F3CA8B80085FA64 /* AuthenticationManager.swift in Sources */,
+				7C0ACA0E1F3CA8B80085FA64 /* LoginViewController.swift in Sources */,
+				7C0ACA0D1F3CA8B80085FA64 /* LoggedInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9D3FCF6E1F3A18A400FBBB93 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9D3FCF6F1F3A18A400FBBB93 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9D3FCF731F3A18A400FBBB93 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
