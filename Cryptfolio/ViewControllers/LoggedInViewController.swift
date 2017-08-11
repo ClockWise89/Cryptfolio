@@ -18,11 +18,18 @@ class LoggedInViewController: UIViewController {
     }
     
     @IBAction func logoutPressed(_ sender: Any) {
-        AuthenticationManager.shared.signOut() { (success) in
-            if success {
-                self.performSegue(withIdentifier: "showLogin", sender: nil)
-                // Do clean up
-            }
+//        AuthenticationManager.shared.signOut() { (success) in
+//            if success {
+//                self.performSegue(withIdentifier: "showLogin", sender: nil)
+//                // Do clean up
+//            }
+//        }
+        
+        ApiManager.shared.cryptoCompareService.coinList().then { _ -> Void in
+            DDLogDebug("API call complete.")
+            }.catch { error in
+                // handle error
+                DDLogDebug("Error: \(error.localizedDescription)")
         }
     }
 }

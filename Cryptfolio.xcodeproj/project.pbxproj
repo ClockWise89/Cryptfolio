@@ -16,6 +16,10 @@
 		9D3FCF6B1F3A18A400FBBB93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FCF6A1F3A18A400FBBB93 /* AppDelegate.swift */; };
 		9D3FCF721F3A18A400FBBB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */; };
 		9D3FCF751F3A18A400FBBB93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF731F3A18A400FBBB93 /* LaunchScreen.storyboard */; };
+		9DCD5A041F3E6A05007F491F /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD5A031F3E6A05007F491F /* ApiManager.swift */; };
+		9DCD5A061F3E6A33007F491F /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD5A051F3E6A33007F491F /* ApiService.swift */; };
+		9DCD5A081F3E6CFF007F491F /* ServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD5A071F3E6CFF007F491F /* ServiceResponse.swift */; };
+		9DCD5A0A1F3E77BA007F491F /* CryptoCompareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD5A091F3E77BA007F491F /* CryptoCompareService.swift */; };
 		9DEEBB291F3A1BB400CA0466 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DEEBB281F3A1BB400CA0466 /* GoogleService-Info.plist */; };
 		9DEEBB2B1F3A23DE00CA0466 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DEEBB2A1F3A23DE00CA0466 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -32,6 +36,10 @@
 		9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D3FCF741F3A18A400FBBB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D3FCF761F3A18A400FBBB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DCD5A031F3E6A05007F491F /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		9DCD5A051F3E6A33007F491F /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		9DCD5A071F3E6CFF007F491F /* ServiceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceResponse.swift; sourceTree = "<group>"; };
+		9DCD5A091F3E77BA007F491F /* CryptoCompareService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoCompareService.swift; sourceTree = "<group>"; };
 		9DEEBB281F3A1BB400CA0466 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9DEEBB2A1F3A23DE00CA0466 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BAF4F148534DF5A0D4CE789A /* Pods-Cryptfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptfolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,11 +134,15 @@
 		9D3FCF691F3A18A400FBBB93 /* Cryptfolio */ = {
 			isa = PBXGroup;
 			children = (
-				7C0ACA101F3CA8C20085FA64 /* SupportingFiles */,
 				7C0ACA031F3CA8B80085FA64 /* Managers */,
 				7C0ACA051F3CA8B80085FA64 /* Models */,
 				7C0ACA061F3CA8B80085FA64 /* ViewControllers */,
+				7C0ACA101F3CA8C20085FA64 /* SupportingFiles */,
 				9D3FCF6A1F3A18A400FBBB93 /* AppDelegate.swift */,
+				9DCD5A031F3E6A05007F491F /* ApiManager.swift */,
+				9DCD5A051F3E6A33007F491F /* ApiService.swift */,
+				9DCD5A071F3E6CFF007F491F /* ServiceResponse.swift */,
+				9DCD5A091F3E77BA007F491F /* CryptoCompareService.swift */,
 			);
 			path = Cryptfolio;
 			sourceTree = "<group>";
@@ -248,16 +260,26 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/StarscreamSocketIO/StarscreamSocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StarscreamSocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,9 +296,13 @@
 			files = (
 				7C0ACA0F1F3CA8B80085FA64 /* SignUpViewController.swift in Sources */,
 				9D3FCF6B1F3A18A400FBBB93 /* AppDelegate.swift in Sources */,
+				9DCD5A0A1F3E77BA007F491F /* CryptoCompareService.swift in Sources */,
 				7C0ACA0C1F3CA8B80085FA64 /* LaunchViewController.swift in Sources */,
+				9DCD5A041F3E6A05007F491F /* ApiManager.swift in Sources */,
 				7C0ACA0B1F3CA8B80085FA64 /* AuthenticationManager.swift in Sources */,
 				7C0ACA0E1F3CA8B80085FA64 /* LoginViewController.swift in Sources */,
+				9DCD5A081F3E6CFF007F491F /* ServiceResponse.swift in Sources */,
+				9DCD5A061F3E6A33007F491F /* ApiService.swift in Sources */,
 				7C0ACA0D1F3CA8B80085FA64 /* LoggedInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
