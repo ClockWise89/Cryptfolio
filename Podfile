@@ -9,5 +9,9 @@ target 'Cryptfolio' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'CocoaLumberjack/Swift'
+  pod 'Socket.IO-Client-Swift', '~> 11.0.2'
+  pod 'Alamofire', '~> 4.0'
+  pod 'SwiftyJSON'
+  pod 'PromiseKit', '~> 4.0'
 
 end
