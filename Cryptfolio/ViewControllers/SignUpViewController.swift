@@ -19,7 +19,7 @@ class SignUpViewController: UIViewController {
         
         AuthenticationManager.shared.addStateListener() { (success) in
             if success {
-                self.performSegue(withIdentifier: "showLoggedIn", sender: nil)
+                self.performSegue(withIdentifier: "showMain", sender: nil)
             }
         }
     }

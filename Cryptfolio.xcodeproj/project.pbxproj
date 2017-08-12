@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7C0ACA0B1F3CA8B80085FA64 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA041F3CA8B80085FA64 /* AuthenticationManager.swift */; };
 		7C0ACA0C1F3CA8B80085FA64 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA071F3CA8B80085FA64 /* LaunchViewController.swift */; };
-		7C0ACA0D1F3CA8B80085FA64 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA081F3CA8B80085FA64 /* LoggedInViewController.swift */; };
 		7C0ACA0E1F3CA8B80085FA64 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA091F3CA8B80085FA64 /* LoginViewController.swift */; };
 		7C0ACA0F1F3CA8B80085FA64 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA0A1F3CA8B80085FA64 /* SignUpViewController.swift */; };
 		8FCA4A51B21295B7E8727767 /* Pods_Cryptfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B724B25340132560932538 /* Pods_Cryptfolio.framework */; };
@@ -24,12 +23,17 @@
 		9DEEBB2B1F3A23DE00CA0466 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DEEBB2A1F3A23DE00CA0466 /* Main.storyboard */; };
 		9DFA43891F3EEF6900CF0860 /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43881F3EEF6900CF0860 /* ParseManager.swift */; };
 		9DFA438B1F3EEFEA00CF0860 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA438A1F3EEFEA00CF0860 /* Asset.swift */; };
+		9DFA438D1F3F124000CF0860 /* HoldingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA438C1F3F124000CF0860 /* HoldingsViewController.swift */; };
+		9DFA43911F3F143400CF0860 /* MarketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43901F3F143400CF0860 /* MarketTableViewController.swift */; };
+		9DFA43941F3F14DE00CF0860 /* AssetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43921F3F14DE00CF0860 /* AssetTableViewCell.swift */; };
+		9DFA43951F3F14DE00CF0860 /* AssetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DFA43931F3F14DE00CF0860 /* AssetTableViewCell.xib */; };
+		9DFA43971F3F185C00CF0860 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43961F3F185C00CF0860 /* Constants.swift */; };
+		9DFA43991F3F23C100CF0860 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43981F3F23C100CF0860 /* AccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7C0ACA041F3CA8B80085FA64 /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		7C0ACA071F3CA8B80085FA64 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
-		7C0ACA081F3CA8B80085FA64 /* LoggedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
 		7C0ACA091F3CA8B80085FA64 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7C0ACA0A1F3CA8B80085FA64 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		85CBB6CEF5928E319F071390 /* Pods-Cryptfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptfolio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio.debug.xcconfig"; sourceTree = "<group>"; };
@@ -46,6 +50,12 @@
 		9DEEBB2A1F3A23DE00CA0466 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9DFA43881F3EEF6900CF0860 /* ParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManager.swift; sourceTree = "<group>"; };
 		9DFA438A1F3EEFEA00CF0860 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Asset.swift; path = Cryptfolio/Managers/Asset.swift; sourceTree = SOURCE_ROOT; };
+		9DFA438C1F3F124000CF0860 /* HoldingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoldingsViewController.swift; sourceTree = "<group>"; };
+		9DFA43901F3F143400CF0860 /* MarketTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketTableViewController.swift; sourceTree = "<group>"; };
+		9DFA43921F3F14DE00CF0860 /* AssetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTableViewCell.swift; sourceTree = "<group>"; };
+		9DFA43931F3F14DE00CF0860 /* AssetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetTableViewCell.xib; sourceTree = "<group>"; };
+		9DFA43961F3F185C00CF0860 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9DFA43981F3F23C100CF0860 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		BAF4F148534DF5A0D4CE789A /* Pods-Cryptfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptfolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio.release.xcconfig"; sourceTree = "<group>"; };
 		D3B724B25340132560932538 /* Pods_Cryptfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -92,9 +102,11 @@
 			isa = PBXGroup;
 			children = (
 				7C0ACA071F3CA8B80085FA64 /* LaunchViewController.swift */,
-				7C0ACA081F3CA8B80085FA64 /* LoggedInViewController.swift */,
 				7C0ACA091F3CA8B80085FA64 /* LoginViewController.swift */,
 				7C0ACA0A1F3CA8B80085FA64 /* SignUpViewController.swift */,
+				9DFA438C1F3F124000CF0860 /* HoldingsViewController.swift */,
+				9DFA43901F3F143400CF0860 /* MarketTableViewController.swift */,
+				9DFA43981F3F23C100CF0860 /* AccountViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -149,6 +161,9 @@
 				9DCD5A051F3E6A33007F491F /* ApiService.swift */,
 				9DCD5A071F3E6CFF007F491F /* ServiceResponse.swift */,
 				9DCD5A091F3E77BA007F491F /* CryptoCompareService.swift */,
+				9DFA43921F3F14DE00CF0860 /* AssetTableViewCell.swift */,
+				9DFA43931F3F14DE00CF0860 /* AssetTableViewCell.xib */,
+				9DFA43961F3F185C00CF0860 /* Constants.swift */,
 			);
 			path = Cryptfolio;
 			sourceTree = "<group>";
@@ -216,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DFA43951F3F14DE00CF0860 /* AssetTableViewCell.xib in Resources */,
 				9D3FCF751F3A18A400FBBB93 /* LaunchScreen.storyboard in Resources */,
 				9DEEBB291F3A1BB400CA0466 /* GoogleService-Info.plist in Resources */,
 				9D3FCF721F3A18A400FBBB93 /* Assets.xcassets in Resources */,
@@ -270,6 +286,7 @@
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/StarscreamSocketIO/StarscreamSocketIO.framework",
@@ -282,6 +299,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StarscreamSocketIO.framework",
@@ -300,9 +318,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DFA43941F3F14DE00CF0860 /* AssetTableViewCell.swift in Sources */,
+				9DFA43911F3F143400CF0860 /* MarketTableViewController.swift in Sources */,
+				9DFA43991F3F23C100CF0860 /* AccountViewController.swift in Sources */,
 				7C0ACA0F1F3CA8B80085FA64 /* SignUpViewController.swift in Sources */,
 				9D3FCF6B1F3A18A400FBBB93 /* AppDelegate.swift in Sources */,
 				9DCD5A0A1F3E77BA007F491F /* CryptoCompareService.swift in Sources */,
+				9DFA43971F3F185C00CF0860 /* Constants.swift in Sources */,
 				7C0ACA0C1F3CA8B80085FA64 /* LaunchViewController.swift in Sources */,
 				9DCD5A041F3E6A05007F491F /* ApiManager.swift in Sources */,
 				7C0ACA0B1F3CA8B80085FA64 /* AuthenticationManager.swift in Sources */,
@@ -310,7 +332,7 @@
 				7C0ACA0E1F3CA8B80085FA64 /* LoginViewController.swift in Sources */,
 				9DCD5A081F3E6CFF007F491F /* ServiceResponse.swift in Sources */,
 				9DCD5A061F3E6A33007F491F /* ApiService.swift in Sources */,
-				7C0ACA0D1F3CA8B80085FA64 /* LoggedInViewController.swift in Sources */,
+				9DFA438D1F3F124000CF0860 /* HoldingsViewController.swift in Sources */,
 				9DFA43891F3EEF6900CF0860 /* ParseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

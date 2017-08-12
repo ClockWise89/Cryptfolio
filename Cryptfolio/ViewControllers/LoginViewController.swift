@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
         
         AuthenticationManager.shared.addStateListener() { (success) in
             if success {
-                self.performSegue(withIdentifier: "showLoggedIn", sender: nil)
+                self.performSegue(withIdentifier: "showMain", sender: nil)
             }
         }
     }
@@ -38,5 +38,9 @@ class LoginViewController: UIViewController {
         }
         
         AuthenticationManager.shared.signIn(email: email, password: password)
+    }
+    
+    @IBAction func unwindToLogin(segue: UIStoryboardSegue) {
+        
     }
 }
