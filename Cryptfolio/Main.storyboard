@@ -189,39 +189,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9s-VP-0Xz">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9s-VP-0Xz" customClass="SummaryView" customModule="Cryptfolio" customModuleProvider="target">
                                 <rect key="frame" x="20" y="60" width="162.5" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="J3J-SR-vhE"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRB-1b-bk9">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRB-1b-bk9" customClass="SummaryView" customModule="Cryptfolio" customModuleProvider="target">
                                 <rect key="frame" x="192.5" y="60" width="162.5" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Apf-Vk-p4B">
-                                <rect key="frame" x="20" y="200" width="335" height="408"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aRK-LY-DCY">
+                                <rect key="frame" x="20" y="170" width="335" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="xHT-s0-h0I"/>
+                                </constraints>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="NRB-1b-bk9" secondAttribute="trailing" constant="20" id="3P8-VZ-I5d"/>
                             <constraint firstItem="NRB-1b-bk9" firstAttribute="leading" secondItem="s9s-VP-0Xz" secondAttribute="trailing" constant="10" id="6kw-bD-jxV"/>
-                            <constraint firstItem="85c-x5-89x" firstAttribute="top" secondItem="Apf-Vk-p4B" secondAttribute="bottom" constant="10" id="ABw-wZ-4Jl"/>
+                            <constraint firstItem="aRK-LY-DCY" firstAttribute="leading" secondItem="wHi-0M-AxA" secondAttribute="leading" constant="20" id="Aky-Ju-gIG"/>
                             <constraint firstItem="NRB-1b-bk9" firstAttribute="centerY" secondItem="s9s-VP-0Xz" secondAttribute="centerY" id="BGw-oV-5Dv"/>
+                            <constraint firstAttribute="trailing" secondItem="aRK-LY-DCY" secondAttribute="trailing" constant="20" id="DUH-78-zJN"/>
                             <constraint firstItem="s9s-VP-0Xz" firstAttribute="top" secondItem="heM-YZ-7VH" secondAttribute="bottom" constant="40" id="Ep4-Vd-Lsx"/>
-                            <constraint firstItem="Apf-Vk-p4B" firstAttribute="leading" secondItem="wHi-0M-AxA" secondAttribute="leading" constant="20" id="LUa-Si-45n"/>
-                            <constraint firstItem="Apf-Vk-p4B" firstAttribute="top" secondItem="NRB-1b-bk9" secondAttribute="bottom" constant="40" id="OKT-CX-xUL"/>
                             <constraint firstItem="s9s-VP-0Xz" firstAttribute="leading" secondItem="wHi-0M-AxA" secondAttribute="leading" constant="20" id="OZd-D6-wT3"/>
+                            <constraint firstItem="aRK-LY-DCY" firstAttribute="top" secondItem="NRB-1b-bk9" secondAttribute="bottom" constant="10" id="SPn-gC-SHs"/>
+                            <constraint firstItem="85c-x5-89x" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aRK-LY-DCY" secondAttribute="bottom" constant="10" id="Uap-Ah-xxx"/>
                             <constraint firstItem="NRB-1b-bk9" firstAttribute="top" secondItem="heM-YZ-7VH" secondAttribute="bottom" constant="40" id="VvQ-bW-utI"/>
-                            <constraint firstAttribute="trailing" secondItem="Apf-Vk-p4B" secondAttribute="trailing" constant="20" id="bvu-uM-OYb"/>
                             <constraint firstItem="NRB-1b-bk9" firstAttribute="width" secondItem="s9s-VP-0Xz" secondAttribute="width" id="dIa-Xg-FLK"/>
                             <constraint firstItem="NRB-1b-bk9" firstAttribute="height" secondItem="s9s-VP-0Xz" secondAttribute="height" id="nqR-dM-cyx"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="sYn-wh-ddx"/>
+                    <connections>
+                        <outlet property="leftSummaryView" destination="s9s-VP-0Xz" id="SYc-rR-0iH"/>
+                        <outlet property="portfolioTableView" destination="aRK-LY-DCY" id="Gx2-Wc-cfY"/>
+                        <outlet property="rightSummaryView" destination="NRB-1b-bk9" id="svK-3y-VUo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEb-22-Zmi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

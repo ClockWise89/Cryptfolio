@@ -15,6 +15,9 @@ enum cfColor: String {
     case white = "#FDFDFD"
     case black = "#2C2C2C"
     case abbey = "#4C4F56"
+    case dodgerBlue = "#33C8FF"
+    case geraldineRed = "#FE8183"
+    
     
 }
 
