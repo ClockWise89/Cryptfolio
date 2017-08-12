@@ -9,7 +9,11 @@
 import Foundation
 
 public struct Constants {
-    public enum Urls: String {
-        case imageUrl = "https://www.cryptocompare.com"
+    public struct Urls {
+        static let imageUrl = "https://www.cryptocompare.com"
+    }
+    
+    public struct Cells {
+        static let asset = "AssetTableViewCell"
     }
 }

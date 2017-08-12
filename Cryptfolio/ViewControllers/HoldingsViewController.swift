@@ -12,7 +12,10 @@ class HoldingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        self.style()
+    }
+    
+    private func style() {
+        self.view.backgroundColor = UIColor.cfColor(.mineShaft)
     }
 }

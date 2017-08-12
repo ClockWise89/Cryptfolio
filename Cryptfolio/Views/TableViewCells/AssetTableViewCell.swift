@@ -25,7 +25,7 @@ class AssetTableViewCell: UITableViewCell {
     }
     
     func setup(asset: Asset) {
-        if let url = URL(string: Constants.Urls.imageUrl.rawValue + asset.imageUrl) {
+        if let url = URL(string: Constants.Urls.imageUrl + asset.imageUrl) {
             self.iconImageView.kf.setImage(with: url, options: [.transition(.fade(0.2))])
         } else {
             DDLogDebug("Could not create url from imageview")
