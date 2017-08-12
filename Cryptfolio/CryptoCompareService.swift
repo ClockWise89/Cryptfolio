@@ -9,6 +9,7 @@
 import Foundation
 import PromiseKit
 import SwiftyJSON
+import CocoaLumberjack
 
 class CryptoCompareService{
     let apiService: ApiService
@@ -18,11 +19,18 @@ class CryptoCompareService{
         self.apiService = apiService
     }
     
-    func coinList() -> Promise<Void> {
+    func coinList() -> Promise<[Asset]> {
         return Promise { fulfill, reject in
-            self.apiService.baseRequest(method: .get, url: "coinlist").then { response -> Void in
+            self.apiService.baseRequest(method: .get, url: "/coinlist").then { response -> Void in
                 
-                fulfill()
+                var assets: [Asset] = []
+                if let json = response.json {
+                    assets = ParseManager.parseCoinList(json: json)
+                }
+                
+                DDLogDebug("Request fetched \(assets.count) objects")
+                
+                fulfill(assets)
                 
                 }.catch { error in
                     reject(error)

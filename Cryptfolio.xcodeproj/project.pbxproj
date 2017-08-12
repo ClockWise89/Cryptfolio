@@ -22,6 +22,8 @@
 		9DCD5A0A1F3E77BA007F491F /* CryptoCompareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD5A091F3E77BA007F491F /* CryptoCompareService.swift */; };
 		9DEEBB291F3A1BB400CA0466 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DEEBB281F3A1BB400CA0466 /* GoogleService-Info.plist */; };
 		9DEEBB2B1F3A23DE00CA0466 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DEEBB2A1F3A23DE00CA0466 /* Main.storyboard */; };
+		9DFA43891F3EEF6900CF0860 /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43881F3EEF6900CF0860 /* ParseManager.swift */; };
+		9DFA438B1F3EEFEA00CF0860 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA438A1F3EEFEA00CF0860 /* Asset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		9DCD5A091F3E77BA007F491F /* CryptoCompareService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoCompareService.swift; sourceTree = "<group>"; };
 		9DEEBB281F3A1BB400CA0466 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9DEEBB2A1F3A23DE00CA0466 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9DFA43881F3EEF6900CF0860 /* ParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManager.swift; sourceTree = "<group>"; };
+		9DFA438A1F3EEFEA00CF0860 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Asset.swift; path = Cryptfolio/Managers/Asset.swift; sourceTree = SOURCE_ROOT; };
 		BAF4F148534DF5A0D4CE789A /* Pods-Cryptfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptfolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio.release.xcconfig"; sourceTree = "<group>"; };
 		D3B724B25340132560932538 /* Pods_Cryptfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				7C0ACA041F3CA8B80085FA64 /* AuthenticationManager.swift */,
+				9DFA43881F3EEF6900CF0860 /* ParseManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -78,6 +83,7 @@
 		7C0ACA051F3CA8B80085FA64 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9DFA438A1F3EEFEA00CF0860 /* Asset.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -300,10 +306,12 @@
 				7C0ACA0C1F3CA8B80085FA64 /* LaunchViewController.swift in Sources */,
 				9DCD5A041F3E6A05007F491F /* ApiManager.swift in Sources */,
 				7C0ACA0B1F3CA8B80085FA64 /* AuthenticationManager.swift in Sources */,
+				9DFA438B1F3EEFEA00CF0860 /* Asset.swift in Sources */,
 				7C0ACA0E1F3CA8B80085FA64 /* LoginViewController.swift in Sources */,
 				9DCD5A081F3E6CFF007F491F /* ServiceResponse.swift in Sources */,
 				9DCD5A061F3E6A33007F491F /* ApiService.swift in Sources */,
 				7C0ACA0D1F3CA8B80085FA64 /* LoggedInViewController.swift in Sources */,
+				9DFA43891F3EEF6900CF0860 /* ParseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,7 +25,7 @@ class LoggedInViewController: UIViewController {
 //            }
 //        }
         
-        ApiManager.shared.cryptoCompareService.coinList().then { _ -> Void in
+        ApiManager.shared.cryptoCompareService.coinList().then { assets -> Void in
             DDLogDebug("API call complete.")
             }.catch { error in
                 // handle error

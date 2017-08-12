@@ -44,12 +44,7 @@ class ApiService {
         return Promise { fulfill, reject -> Void in
             request.validate().responseJSON { response in
                
-                DDLogDebug("Request: \(String(describing: response.request!.httpMethod)) \(String(describing: response.request!.url?.absoluteString))")
-                
-                if let data = response.result.value {
-                    DDLogDebug("Json: \(JSON(data))")
-                }
-                
+                DDLogDebug("Request: \(String(describing: String(response.request!.httpMethod!))) \(String(describing: response.request!.url!.absoluteString))")
                 
                 switch response.result {
                 case .success:
