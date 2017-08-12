@@ -16,10 +16,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var separatorView: UIView!
+    @IBOutlet weak var loginContainerView: UIView!
+    @IBOutlet weak var appNameLabel: UILabel!
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.style()
         
         AuthenticationManager.shared.addStateListener() { (success) in
@@ -31,17 +34,22 @@ class LoginViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         AuthenticationManager.shared.removeStateListener()
     }
     
     private func style() {
-        self.view.backgroundColor = UIColor.cfColor(.white)
+        self.view.backgroundColor = UIColor.cfColor(.black)
         self.separatorView.backgroundColor = UIColor.cfColor(.concrete)
         self.signInButton.layer.cornerRadius = 5.0
         self.signInButton.clipsToBounds = true
-        self.signInButton.backgroundColor = UIColor.cfColor(.black)
+        self.signInButton.backgroundColor = UIColor.cfColor(.white)
         self.signInButton.setTitle("Sign in", for: .normal)
-        self.signInButton.setTitleColor(UIColor.cfColor(.white), for: .normal)
+        self.signInButton.setTitleColor(UIColor.cfColor(.black), for: .normal)
+        self.loginContainerView.layer.cornerRadius = 5.0
+        self.loginContainerView.clipsToBounds = true
+        self.loginContainerView.backgroundColor = UIColor.cfColor(.white)
+        self.appNameLabel.textColor = UIColor.cfColor(.white)
     }
     
     @IBAction func donePressed(_ sender: Any) {
