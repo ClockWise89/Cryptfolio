@@ -14,10 +14,13 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var separatorView: UIView!
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.style()
         
         AuthenticationManager.shared.addStateListener() { (success) in
             if success {
@@ -29,6 +32,16 @@ class LoginViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         AuthenticationManager.shared.removeStateListener()
+    }
+    
+    private func style() {
+        self.view.backgroundColor = UIColor.cfColor(.white)
+        self.separatorView.backgroundColor = UIColor.cfColor(.concrete)
+        self.signInButton.layer.cornerRadius = 5.0
+        self.signInButton.clipsToBounds = true
+        self.signInButton.backgroundColor = UIColor.cfColor(.black)
+        self.signInButton.setTitle("Sign in", for: .normal)
+        self.signInButton.setTitleColor(UIColor.cfColor(.white), for: .normal)
     }
     
     @IBAction func donePressed(_ sender: Any) {

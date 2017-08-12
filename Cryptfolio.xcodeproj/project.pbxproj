@@ -29,6 +29,7 @@
 		9DFA43951F3F14DE00CF0860 /* AssetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DFA43931F3F14DE00CF0860 /* AssetTableViewCell.xib */; };
 		9DFA43971F3F185C00CF0860 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43961F3F185C00CF0860 /* Constants.swift */; };
 		9DFA43991F3F23C100CF0860 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43981F3F23C100CF0860 /* AccountViewController.swift */; };
+		9DFA439B1F3F268200CF0860 /* ColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA439A1F3F268200CF0860 /* ColorsExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		9DFA43931F3F14DE00CF0860 /* AssetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetTableViewCell.xib; sourceTree = "<group>"; };
 		9DFA43961F3F185C00CF0860 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9DFA43981F3F23C100CF0860 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		9DFA439A1F3F268200CF0860 /* ColorsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsExtension.swift; sourceTree = "<group>"; };
 		BAF4F148534DF5A0D4CE789A /* Pods-Cryptfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptfolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio.release.xcconfig"; sourceTree = "<group>"; };
 		D3B724B25340132560932538 /* Pods_Cryptfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -164,6 +166,7 @@
 				9DFA43921F3F14DE00CF0860 /* AssetTableViewCell.swift */,
 				9DFA43931F3F14DE00CF0860 /* AssetTableViewCell.xib */,
 				9DFA43961F3F185C00CF0860 /* Constants.swift */,
+				9DFA439A1F3F268200CF0860 /* ColorsExtension.swift */,
 			);
 			path = Cryptfolio;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				7C0ACA0B1F3CA8B80085FA64 /* AuthenticationManager.swift in Sources */,
 				9DFA438B1F3EEFEA00CF0860 /* Asset.swift in Sources */,
 				7C0ACA0E1F3CA8B80085FA64 /* LoginViewController.swift in Sources */,
+				9DFA439B1F3F268200CF0860 /* ColorsExtension.swift in Sources */,
 				9DCD5A081F3E6CFF007F491F /* ServiceResponse.swift in Sources */,
 				9DCD5A061F3E6A33007F491F /* ApiService.swift in Sources */,
 				9DFA438D1F3F124000CF0860 /* HoldingsViewController.swift in Sources */,
