@@ -10,9 +10,11 @@ import Foundation
 import UIKit
 
 enum cfColor: String {
-    case black = "#444444"
+    case mineShaft = "#3E3E3E"
     case concrete = "#F3F3F3"
     case white = "#FDFDFD"
+    case black = "#2C2C2C"
+    
 }
 
 extension UIColor {

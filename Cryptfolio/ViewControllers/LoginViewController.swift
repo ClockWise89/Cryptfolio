@@ -39,17 +39,19 @@ class LoginViewController: UIViewController {
     }
     
     private func style() {
-        self.view.backgroundColor = UIColor.cfColor(.black)
+        self.view.backgroundColor = UIColor.cfColor(.mineShaft)
         self.separatorView.backgroundColor = UIColor.cfColor(.concrete)
         self.signInButton.layer.cornerRadius = 5.0
         self.signInButton.clipsToBounds = true
         self.signInButton.backgroundColor = UIColor.cfColor(.white)
         self.signInButton.setTitle("Sign in", for: .normal)
-        self.signInButton.setTitleColor(UIColor.cfColor(.black), for: .normal)
+        self.signInButton.setTitleColor(UIColor.cfColor(.mineShaft), for: .normal)
         self.loginContainerView.layer.cornerRadius = 5.0
         self.loginContainerView.clipsToBounds = true
         self.loginContainerView.backgroundColor = UIColor.cfColor(.white)
         self.appNameLabel.textColor = UIColor.cfColor(.white)
+        self.emailTextField.textColor = UIColor.cfColor(.black)
+        self.passwordTextField.textColor = UIColor.cfColor(.black)
     }
     
     @IBAction func donePressed(_ sender: Any) {
