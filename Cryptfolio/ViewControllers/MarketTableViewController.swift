@@ -14,9 +14,7 @@ class MarketTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.tableView.contentInset = UIEdgeInsets(top: UIApplication.shared.statusBarFrame.size.height, left: 0, bottom: 0, right: 0) // Adjust for the status bar
-        
         self.tableView.register(AssetTableViewCell.getNib(), forCellReuseIdentifier: Constants.Cells.asset)
         self.fetchAssets()
     }
@@ -30,7 +28,6 @@ class MarketTableViewController: UITableViewController {
                 // Handle error
         }
     }
-
 }
 
 extension MarketTableViewController {

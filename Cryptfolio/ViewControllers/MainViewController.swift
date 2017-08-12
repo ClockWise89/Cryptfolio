@@ -21,7 +21,7 @@ class MainViewController: UITabBarController {
     private func styleTabBar() {
         self.tabBar.barTintColor = UIColor.cfColor(.concrete)
         self.tabBar.isTranslucent = false
-        
+        self.tabBar.tintColor = UIColor.cfColor(.black)
     }
     
     private func setupTabBar() {
@@ -32,6 +32,7 @@ class MainViewController: UITabBarController {
         
         var activeImage = UIImage()
         var inactiveImage = UIImage()
+        var title = ""
         
         for (index, item) in (items).enumerated() {
             
@@ -39,20 +40,22 @@ class MainViewController: UITabBarController {
             case 0:
                 activeImage = UIImage(named: "iconPortfolioActive")!
                 inactiveImage = UIImage(named: "iconPortfolioInactive")!
+                title = "Holdings"
             case 1:
                 activeImage = UIImage(named: "iconMarketActive")!
                 inactiveImage = UIImage(named: "iconMarketInactive")!
+                title = "Market"
             case 2:
                 activeImage = UIImage(named: "iconProfileActive")!
                 inactiveImage = UIImage(named: "iconProfileInactive")!
+                title = "Account"
 
             default: break
             }
             
             item.image = inactiveImage.withRenderingMode(.alwaysOriginal)
             item.selectedImage = activeImage.withRenderingMode(.alwaysOriginal)
-            
-            self.tabBar.tintColor = UIColor.cfColor(.black)
+            item.title = title
         }
     }
 }
