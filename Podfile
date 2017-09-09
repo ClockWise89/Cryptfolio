@@ -13,5 +13,6 @@ target 'Cryptfolio' do
   pod 'Alamofire', '~> 4.0'
   pod 'SwiftyJSON'
   pod 'PromiseKit', '~> 4.0'
+  pod 'SQLite.swift', '~> 0.11.3'
 
 end

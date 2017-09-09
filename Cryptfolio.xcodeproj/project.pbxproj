@@ -13,6 +13,7 @@
 		7C0ACA0E1F3CA8B80085FA64 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA091F3CA8B80085FA64 /* LoginViewController.swift */; };
 		7C0ACA0F1F3CA8B80085FA64 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA0A1F3CA8B80085FA64 /* SignUpViewController.swift */; };
 		8FCA4A51B21295B7E8727767 /* Pods_Cryptfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B724B25340132560932538 /* Pods_Cryptfolio.framework */; };
+		9D386D211F63CA4B002C4C75 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D386D201F63CA4B002C4C75 /* Database.swift */; };
 		9D3FCF6B1F3A18A400FBBB93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FCF6A1F3A18A400FBBB93 /* AppDelegate.swift */; };
 		9D3FCF721F3A18A400FBBB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */; };
 		9D3FCF751F3A18A400FBBB93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF731F3A18A400FBBB93 /* LaunchScreen.storyboard */; };
@@ -33,6 +34,7 @@
 		7C0ACA091F3CA8B80085FA64 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7C0ACA0A1F3CA8B80085FA64 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		85CBB6CEF5928E319F071390 /* Pods-Cryptfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptfolio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio.debug.xcconfig"; sourceTree = "<group>"; };
+		9D386D201F63CA4B002C4C75 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		9D3FCF671F3A18A400FBBB93 /* Cryptfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3FCF6A1F3A18A400FBBB93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,6 +121,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9D386D1D1F63CA35002C4C75 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				9D386D201F63CA4B002C4C75 /* Database.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		9D3FCF5E1F3A18A300FBBB93 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +150,7 @@
 		9D3FCF691F3A18A400FBBB93 /* Cryptfolio */ = {
 			isa = PBXGroup;
 			children = (
+				9D386D1D1F63CA35002C4C75 /* Database */,
 				7C0ACA031F3CA8B80085FA64 /* Managers */,
 				7C0ACA051F3CA8B80085FA64 /* Models */,
 				7C0ACA061F3CA8B80085FA64 /* ViewControllers */,
@@ -271,6 +282,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/StarscreamSocketIO/StarscreamSocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -283,6 +295,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StarscreamSocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -311,6 +324,7 @@
 				9DCD5A081F3E6CFF007F491F /* ServiceResponse.swift in Sources */,
 				9DCD5A061F3E6A33007F491F /* ApiService.swift in Sources */,
 				7C0ACA0D1F3CA8B80085FA64 /* LoggedInViewController.swift in Sources */,
+				9D386D211F63CA4B002C4C75 /* Database.swift in Sources */,
 				9DFA43891F3EEF6900CF0860 /* ParseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

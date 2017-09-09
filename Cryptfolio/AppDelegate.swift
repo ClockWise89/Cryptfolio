@@ -10,16 +10,35 @@ import UIKit
 import Firebase
 import CocoaLumberjack
 
+let logLevel = DDLogLevel.debug // Should only be debug when in debug
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+       
+        DDLog.add(DDTTYLogger.sharedInstance, with: logLevel) // TTY = Xcode console
+        DDLog.add(DDASLLogger.sharedInstance, with: logLevel) // ASL = Apple System Logs
+        
+        let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .allDomainsMask, true)
+        if let path = dirPath.first {
+            DDLogDebug("User directory: \(path)")
+        }
+        
         FirebaseApp.configure()
         
-        DDLog.add(DDTTYLogger.sharedInstance) // TTY = Xcode console
-        DDLog.add(DDASLLogger.sharedInstance) // ASL = Apple System Logs
+
+        let db: Database
+        do {
+            db = try Database.open()
+            DDLogInfo("[VERBOSE] *** Data loged ***")
+        } catch DbError.OpenData(let message) {
+            DDLogError(message)
+        } catch {
+            DDLogError("Unknown error opening database.") // Should never happen since we only throw one error in open()
+        }
 
         return true
     }
