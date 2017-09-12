@@ -28,12 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         FirebaseApp.configure()
-        
-
-        let db: Database
+    
         do {
-            db = try Database.open()
-            DDLogInfo("[VERBOSE] *** Data loged ***")
+            let db = Database.shared
+            try db.open()
+            
         } catch DbError.OpenData(let message) {
             DDLogError(message)
         } catch {

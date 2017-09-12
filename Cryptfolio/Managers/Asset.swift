@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SQLite
 
 class Asset {
     let id: Int

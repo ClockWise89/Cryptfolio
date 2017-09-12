@@ -19,25 +19,70 @@ enum DbError: Error {
 }
 
 class Database {
-    fileprivate let db: SQLite.Connection
     
-    fileprivate init(db: SQLite.Connection) {
-        self.db = db
-    }
+    static let shared = Database()
+    fileprivate var connection: SQLite.Connection!
     
-    static func open() throws -> Database {
+    func open() throws {
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .allDomainsMask, true)
         if let path = dirPath.first {
             
             do {
                 let db = try Connection("\(path)/db.sqlite3")
-                return Database(db: db)
-            } catch let error as NSError {
+                self.connection = db
+                DDLogInfo("Database was opened successfully.")
+                
+                self.prepareModels()
+                
+            } catch {
                 throw DbError.OpenData(message: error.localizedDescription)
             }
             
         } else {
             throw DbError.OpenData(message: "Database directory not found.")
+        }
+    }
+    
+    fileprivate func prepareModels() {
+        do {
+            try self.prepareAsset()
+        } catch DbError.Prepare(message: let message) {
+            DDLogError("Error preparing model: \(message)")
+        
+        } catch {
+            DDLogError(error.localizedDescription)
+        }
+    }
+    
+    fileprivate func prepareAsset() throws {
+        do {
+            let assets = Table("assets")
+            try self.connection.run(assets.create { t in
+                let id = Expression<Int64>("id")
+                let ticker = Expression<String>("ticker")
+                let name = Expression<String>("name")
+                let fullname = Expression<String>("fullname")
+                let balance = Expression<Double>("balance")
+                let lastPrice = Expression<Double>("lastPrice")
+                let timestampAdded = Expression<Double>("timestampAdded")
+                let timestampRemoved = Expression<Double>("timestampRemoved")
+                let lastEdited = Expression<Double>("timestampLastEdited")
+                
+                t.column(id, primaryKey: .autoincrement)
+                t.column(ticker, defaultValue: "Unknown")
+                t.column(name, defaultValue: "Unknown")
+                t.column(fullname, defaultValue: "Unknown")
+                t.column(balance, defaultValue: 0.0)
+                t.column(lastPrice, defaultValue: 0.0)
+                t.column(timestampAdded, defaultValue: 0.0)
+                t.column(timestampRemoved, defaultValue: 0.0)
+                t.column(lastEdited, defaultValue: 0.0)
+            })
+            
+            DDLogInfo("Asset was prepared.")
+            
+        } catch {
+            throw DbError.Prepare(message: error.localizedDescription)
         }
     }
 }
