@@ -18,6 +18,7 @@
 		9D3FCF6B1F3A18A400FBBB93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FCF6A1F3A18A400FBBB93 /* AppDelegate.swift */; };
 		9D3FCF721F3A18A400FBBB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */; };
 		9D3FCF751F3A18A400FBBB93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF731F3A18A400FBBB93 /* LaunchScreen.storyboard */; };
+		9D87E3011F69BF4700D1B33D /* CustomLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87E3001F69BF4700D1B33D /* CustomLogger.swift */; };
 		9DCD5A041F3E6A05007F491F /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD5A031F3E6A05007F491F /* ApiManager.swift */; };
 		9DCD5A061F3E6A33007F491F /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD5A051F3E6A33007F491F /* ApiService.swift */; };
 		9DCD5A081F3E6CFF007F491F /* ServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD5A071F3E6CFF007F491F /* ServiceResponse.swift */; };
@@ -42,6 +43,7 @@
 		9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D3FCF741F3A18A400FBBB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D3FCF761F3A18A400FBBB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D87E3001F69BF4700D1B33D /* CustomLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLogger.swift; sourceTree = "<group>"; };
 		9DCD5A031F3E6A05007F491F /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		9DCD5A051F3E6A33007F491F /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		9DCD5A071F3E6CFF007F491F /* ServiceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceResponse.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				9DCD5A051F3E6A33007F491F /* ApiService.swift */,
 				9DCD5A071F3E6CFF007F491F /* ServiceResponse.swift */,
 				9DCD5A091F3E77BA007F491F /* CryptoCompareService.swift */,
+				9D87E3001F69BF4700D1B33D /* CustomLogger.swift */,
 			);
 			path = Cryptfolio;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D87E3011F69BF4700D1B33D /* CustomLogger.swift in Sources */,
 				7C0ACA0F1F3CA8B80085FA64 /* SignUpViewController.swift in Sources */,
 				9D3FCF6B1F3A18A400FBBB93 /* AppDelegate.swift in Sources */,
 				9DCD5A0A1F3E77BA007F491F /* CryptoCompareService.swift in Sources */,

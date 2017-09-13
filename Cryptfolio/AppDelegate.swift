@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         DDLog.add(DDTTYLogger.sharedInstance, with: logLevel) // TTY = Xcode console
         DDLog.add(DDASLLogger.sharedInstance, with: logLevel) // ASL = Apple System Logs
+        DDTTYLogger.sharedInstance.logFormatter = CustomLogger()
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .allDomainsMask, true)
         if let path = dirPath.first {
