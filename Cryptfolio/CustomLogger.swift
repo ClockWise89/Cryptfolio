@@ -9,6 +9,12 @@
 import CocoaLumberjack
 import Foundation
 
+// DDLogVerbose("Verbose"); // Use for general information
+// DDLogDebug("Debug"); // Use for debug purposes
+// DDLogInfo("Info"); // Use for general important information
+// DDLogWarn("Warn"); // Use for warnings
+// DDLogError("Error"); // Use for errors
+
 class CustomLogger : NSObject, DDLogFormatter {
     
     func format(message logMessage: DDLogMessage) -> String? {

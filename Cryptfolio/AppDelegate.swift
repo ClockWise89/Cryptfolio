@@ -10,7 +10,12 @@ import UIKit
 import Firebase
 import CocoaLumberjack
 
-let logLevel = DDLogLevel.debug // Should only be debug when in debug
+#if DEBUG
+    let logLevel = DDLogLevel.debug
+#else
+    let logLevel = DDLogLevel.info
+#endif
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
