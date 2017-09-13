@@ -18,34 +18,76 @@ enum DbError: Error {
     case Bind(message: String)
 }
 
+enum DatabaseType {
+    case asset
+    case log
+    
+    var name: String {
+        switch self {
+        case .asset:
+            return "asset.sqlite3"
+        case .log:
+            return "log.sqlite3"
+        }
+    }
+}
+
+
 class Database {
     
     static let shared = Database()
-    fileprivate var connection: SQLite.Connection!
+    fileprivate var assetConnection: SQLite.Connection!
+    fileprivate var logConnection: SQLite.Connection!
     
-    func open() throws {
+    // Mark: Init
+    public init() {
+        do {
+            try self.open(type: .asset)
+            try self.open(type: .log)
+            
+        } catch DbError.OpenData(let message) {
+            DDLogError(message)
+        } catch {
+            DDLogError("Unknown error opening database.") // Should never happen since we only throw one error in open()
+        }
+    }
+    
+    fileprivate func open(type: DatabaseType) throws {
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .allDomainsMask, true)
         if let path = dirPath.first {
             
             do {
-                let db = try Connection("\(path)/db.sqlite3")
-                self.connection = db
-                DDLogInfo("Database was opened successfully.")
+                let db = try Connection("\(path)/\(type.name)")
                 
-                self.prepareModels()
+                switch type {
+                case .asset:
+                    self.assetConnection = db
+                case .log:
+                    self.logConnection = db
+                }
+                
+                DDLogInfo("Database \(type.name) was successfully opened.")
+                self.prepareModels(type: type)
                 
             } catch {
                 throw DbError.OpenData(message: error.localizedDescription)
             }
             
         } else {
-            throw DbError.OpenData(message: "Database directory not found.")
+            throw DbError.OpenData(message: "Database \(type.name) directory not found.")
         }
     }
     
-    fileprivate func prepareModels() {
+    fileprivate func prepareModels(type: DatabaseType) {
         do {
-            try self.prepareAsset()
+            
+            switch type {
+            case .asset:
+                try self.prepareAsset()
+            case .log:
+                try self.prepareLog()
+            }
+            
         } catch DbError.Prepare(message: let message) {
             DDLogError("Error preparing model: \(message)")
         
@@ -56,8 +98,8 @@ class Database {
     
     fileprivate func prepareAsset() throws {
         do {
-            let assets = Table("assets")
-            try self.connection.run(assets.create { t in
+            let assets = Table("Asset")
+            try self.assetConnection.run(assets.create(ifNotExists: true) { t in
                 let id = Expression<Int64>("id")
                 let ticker = Expression<String>("ticker")
                 let name = Expression<String>("name")
@@ -82,6 +124,24 @@ class Database {
             })
             
             DDLogInfo("Asset was prepared.")
+            
+        } catch {
+            throw DbError.Prepare(message: error.localizedDescription)
+        }
+    }
+    
+    fileprivate func prepareLog() throws {
+        do {
+            let log = Table("Log")
+            try self.logConnection.run(log.create(ifNotExists: true) { t in
+                let timestamp = Expression<Double>("timestamp")
+                let message = Expression<String>("message")
+                
+                t.column(timestamp, primaryKey: true)
+                t.column(message)
+            })
+            
+            DDLogInfo("Log was prepared.")
             
         } catch {
             throw DbError.Prepare(message: error.localizedDescription)

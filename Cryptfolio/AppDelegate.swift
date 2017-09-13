@@ -34,16 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         FirebaseApp.configure()
+        Database.shared // Initialize databases
     
-        do {
-            let db = Database.shared
-            try db.open()
-            
-        } catch DbError.OpenData(let message) {
-            DDLogError(message)
-        } catch {
-            DDLogError("Unknown error opening database.") // Should never happen since we only throw one error in open()
-        }
+ 
 
         return true
     }
