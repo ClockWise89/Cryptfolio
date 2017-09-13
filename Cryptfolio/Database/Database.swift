@@ -67,6 +67,7 @@ class Database {
                 let timestampAdded = Expression<Double>("timestampAdded")
                 let timestampRemoved = Expression<Double>("timestampRemoved")
                 let lastEdited = Expression<Double>("timestampLastEdited")
+                let status = Expression<Int64>("status")
                 
                 t.column(id, primaryKey: .autoincrement)
                 t.column(ticker, defaultValue: "Unknown")
@@ -77,6 +78,7 @@ class Database {
                 t.column(timestampAdded, defaultValue: 0.0)
                 t.column(timestampRemoved, defaultValue: 0.0)
                 t.column(lastEdited, defaultValue: 0.0)
+                t.column(status, defaultValue: 0)
             })
             
             DDLogInfo("Asset was prepared.")
