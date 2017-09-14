@@ -10,16 +10,34 @@ import UIKit
 import Firebase
 import CocoaLumberjack
 
+#if DEBUG
+    let logLevel = DDLogLevel.debug
+#else
+    let logLevel = DDLogLevel.info
+#endif
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        FirebaseApp.configure()
+       
+        DDLog.add(DDTTYLogger.sharedInstance, with: logLevel) // TTY = Xcode console
+        DDLog.add(DDASLLogger.sharedInstance, with: logLevel) // ASL = Apple System Logs
+        DDTTYLogger.sharedInstance.logFormatter = CustomLogger()
         
-        DDLog.add(DDTTYLogger.sharedInstance) // TTY = Xcode console
-        DDLog.add(DDASLLogger.sharedInstance) // ASL = Apple System Logs
+        let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .allDomainsMask, true)
+        if let path = dirPath.first {
+            DDLogDebug("User directory: \(path)")
+        }
+        
+        FirebaseConfiguration.shared.setLoggerLevel(.min) // Remove logging from firebase for the moment
+        FirebaseApp.configure()
+        let _ = Database.shared // Initialize databases
+    
+ 
 
         return true
     }

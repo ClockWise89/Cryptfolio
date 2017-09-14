@@ -14,5 +14,6 @@ target 'Cryptfolio' do
   pod 'SwiftyJSON'
   pod 'PromiseKit', '~> 4.0'
   pod 'Kingfisher', '~> 3.0'
+  pod 'SQLite.swift', '~> 0.11.3'
 
 end

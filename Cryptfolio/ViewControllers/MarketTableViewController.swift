@@ -10,18 +10,18 @@ import UIKit
 
 class MarketTableViewController: UITableViewController {
     
-    var assets: [Asset] = []
+    var coins: [Coin] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.contentInset = UIEdgeInsets(top: UIApplication.shared.statusBarFrame.size.height, left: 0, bottom: 0, right: 0) // Adjust for the status bar
         self.tableView.register(AssetTableViewCell.getNib(), forCellReuseIdentifier: Constants.Cells.asset)
-        self.fetchAssets()
+        self.fetchCoins()
     }
     
-    private func fetchAssets() {
-        ApiManager.shared.cryptoCompareService.coinList().then { assets -> Void in
-            self.assets = assets
+    private func fetchCoins() {
+        ApiManager.shared.cryptoCompareService.coinList().then { coins -> Void in
+            self.coins = coins
             self.tableView.reloadData()
             
             }.catch{ error in
@@ -37,7 +37,7 @@ extension MarketTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.assets.count
+        return self.coins.count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -46,7 +46,7 @@ extension MarketTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.Cells.asset, for: indexPath) as! AssetTableViewCell
-        cell.setup(asset: self.assets[indexPath.row])
+        cell.setup(coin: self.coins[indexPath.row])
         
         return cell
     }

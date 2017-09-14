@@ -12,20 +12,20 @@ import CocoaLumberjack
 
 class ParseManager {
 
-    static func parseCoinList(json: JSON) -> [Asset] {
-        var assets: [Asset] = []
-        for (_, assetObject) in json["Data"] {
+    static func parseCoinList(json: JSON) -> [Coin] {
+        var coins: [Coin] = []
+        for (_, coinObject) in json["Data"] {
             
-            let id = assetObject["Id"].intValue
-            let overviewUrl = assetObject["Url"].stringValue
-            let imageUrl = assetObject["ImageUrl"].stringValue
-            let ticker = assetObject["Name"].stringValue
-            let name = assetObject["CoinName"].stringValue
-            let fullname = assetObject["FullName"].stringValue
+            let id = coinObject["Id"].intValue
+            let overviewUrl = coinObject["Url"].stringValue
+            let imageUrl = coinObject["ImageUrl"].stringValue
+            let ticker = coinObject["Name"].stringValue
+            let name = coinObject["CoinName"].stringValue
+            let fullname = coinObject["FullName"].stringValue
             
-            assets.append(Asset(id: id, overviewUrl: overviewUrl, imageUrl: imageUrl, ticker: ticker, name: name, fullname: fullname))
+            coins.append(Coin(id: id, overviewUrl: overviewUrl, imageUrl: imageUrl, ticker: ticker, name: name, fullname: fullname))
         }
         
-        return assets
+        return coins
     }
 }

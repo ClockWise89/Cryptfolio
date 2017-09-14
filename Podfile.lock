@@ -52,6 +52,9 @@ PODS:
     - PromiseKit/CorePromise
   - Socket.IO-Client-Swift (11.0.2):
     - StarscreamSocketIO (~> 8.0.2)
+  - SQLite.swift (0.11.3):
+    - SQLite.swift/standard (= 0.11.3)
+  - SQLite.swift/standard (0.11.3)
   - StarscreamSocketIO (8.0.2)
   - SwiftyJSON (3.1.4)
 
@@ -63,6 +66,7 @@ DEPENDENCIES:
   - Kingfisher (~> 3.0)
   - PromiseKit (~> 4.0)
   - Socket.IO-Client-Swift (~> 11.0.2)
+  - SQLite.swift (~> 0.11.3)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -79,9 +83,10 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   PromiseKit: 25a114b90b932ec8169b5736bd0881fe0efa93b5
   Socket.IO-Client-Swift: 17d4daf85d74125c33481d9bc40cbe678f0d631a
+  SQLite.swift: 99b36c22084427f0abbeb957556ce1528cf10bb3
   StarscreamSocketIO: c02ffb2920bd38de6658ce213071fc4ae0e35423
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: c0d22d652e367b3aaa08299af533c59f8cc7336a
+PODFILE CHECKSUM: 24b26fae32cbd00e6d074341dcefbeaae4670dfe
 
 COCOAPODS: 1.3.1

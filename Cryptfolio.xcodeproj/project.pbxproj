@@ -11,7 +11,9 @@
 		7C0ACA0C1F3CA8B80085FA64 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA071F3CA8B80085FA64 /* LaunchViewController.swift */; };
 		7C0ACA0E1F3CA8B80085FA64 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA091F3CA8B80085FA64 /* LoginViewController.swift */; };
 		7C0ACA0F1F3CA8B80085FA64 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA0A1F3CA8B80085FA64 /* SignUpViewController.swift */; };
+		7CD32EE81F68F6E70099C7D6 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD32EE71F68F6E70099C7D6 /* Coin.swift */; };
 		8FCA4A51B21295B7E8727767 /* Pods_Cryptfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B724B25340132560932538 /* Pods_Cryptfolio.framework */; };
+		9D386D211F63CA4B002C4C75 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D386D201F63CA4B002C4C75 /* Database.swift */; };
 		9D3FCF721F3A18A400FBBB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */; };
 		9D3FCF751F3A18A400FBBB93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF731F3A18A400FBBB93 /* LaunchScreen.storyboard */; };
 		9DEEBB291F3A1BB400CA0466 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DEEBB281F3A1BB400CA0466 /* GoogleService-Info.plist */; };
@@ -35,6 +37,8 @@
 		9DFA43C21F3F746B00CF0860 /* SummaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DFA43C11F3F746B00CF0860 /* SummaryView.xib */; };
 		9DFA43C51F3F7C9600CF0860 /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43C31F3F7C9600CF0860 /* PortfolioTableViewCell.swift */; };
 		9DFA43C61F3F7C9600CF0860 /* PortfolioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DFA43C41F3F7C9600CF0860 /* PortfolioTableViewCell.xib */; };
+		9DFD593E1F6AA03600B1493F /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFD593D1F6AA03600B1493F /* DateExtension.swift */; };
+		9DFD59401F6AA03F00B1493F /* CustomLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFD593F1F6AA03F00B1493F /* CustomLogger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +46,9 @@
 		7C0ACA071F3CA8B80085FA64 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		7C0ACA091F3CA8B80085FA64 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7C0ACA0A1F3CA8B80085FA64 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7CD32EE71F68F6E70099C7D6 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = SOURCE_ROOT; };
 		85CBB6CEF5928E319F071390 /* Pods-Cryptfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptfolio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio.debug.xcconfig"; sourceTree = "<group>"; };
+		9D386D201F63CA4B002C4C75 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		9D3FCF671F3A18A400FBBB93 /* Cryptfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D3FCF741F3A18A400FBBB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,7 +62,7 @@
 		9DFA43981F3F23C100CF0860 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		9DFA439C1F3F61D900CF0860 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9DFA43A71F3F715800CF0860 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
-		9DFA43A81F3F715800CF0860 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9DFA43A81F3F715800CF0860 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = API/AppDelegate.swift; sourceTree = "<group>"; };
 		9DFA43A91F3F715800CF0860 /* ServiceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceResponse.swift; sourceTree = "<group>"; };
 		9DFA43AB1F3F715800CF0860 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		9DFA43AC1F3F715800CF0860 /* CryptoCompareService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoCompareService.swift; sourceTree = "<group>"; };
@@ -68,6 +74,8 @@
 		9DFA43C11F3F746B00CF0860 /* SummaryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummaryView.xib; sourceTree = "<group>"; };
 		9DFA43C31F3F7C9600CF0860 /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewCell.swift; sourceTree = "<group>"; };
 		9DFA43C41F3F7C9600CF0860 /* PortfolioTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortfolioTableViewCell.xib; sourceTree = "<group>"; };
+		9DFD593D1F6AA03600B1493F /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		9DFD593F1F6AA03F00B1493F /* CustomLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLogger.swift; sourceTree = "<group>"; };
 		BAF4F148534DF5A0D4CE789A /* Pods-Cryptfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptfolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio.release.xcconfig"; sourceTree = "<group>"; };
 		D3B724B25340132560932538 /* Pods_Cryptfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				9DFA438A1F3EEFEA00CF0860 /* Asset.swift */,
+				7CD32EE71F68F6E70099C7D6 /* Coin.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -144,6 +153,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9D386D1D1F63CA35002C4C75 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				9D386D201F63CA4B002C4C75 /* Database.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		9D3FCF5E1F3A18A300FBBB93 = {
 			isa = PBXGroup;
 			children = (
@@ -165,14 +182,16 @@
 		9D3FCF691F3A18A400FBBB93 /* Cryptfolio */ = {
 			isa = PBXGroup;
 			children = (
-				7C0ACA101F3CA8C20085FA64 /* SupportingFiles */,
 				9DFA43A61F3F715800CF0860 /* API */,
+				9D386D1D1F63CA35002C4C75 /* Database */,
 				7C0ACA031F3CA8B80085FA64 /* Managers */,
 				9DFA43B21F3F716400CF0860 /* Config */,
 				9DFA43B41F3F716400CF0860 /* Extensions */,
 				7C0ACA051F3CA8B80085FA64 /* Models */,
 				9DFA43B61F3F716400CF0860 /* Views */,
 				7C0ACA061F3CA8B80085FA64 /* ViewControllers */,
+				7C0ACA101F3CA8C20085FA64 /* SupportingFiles */,
+				9DFA43A81F3F715800CF0860 /* AppDelegate.swift */,
 			);
 			path = Cryptfolio;
 			sourceTree = "<group>";
@@ -181,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				9DFA43A71F3F715800CF0860 /* ApiManager.swift */,
-				9DFA43A81F3F715800CF0860 /* AppDelegate.swift */,
 				9DFA43A91F3F715800CF0860 /* ServiceResponse.swift */,
 				9DFA43AA1F3F715800CF0860 /* Services */,
 			);
@@ -200,6 +218,7 @@
 		9DFA43B21F3F716400CF0860 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				9DFD593F1F6AA03F00B1493F /* CustomLogger.swift */,
 				9DFA43B31F3F716400CF0860 /* Constants.swift */,
 			);
 			path = Config;
@@ -208,6 +227,7 @@
 		9DFA43B41F3F716400CF0860 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9DFD593D1F6AA03600B1493F /* DateExtension.swift */,
 				9DFA43B51F3F716400CF0860 /* ColorsExtension.swift */,
 			);
 			path = Extensions;
@@ -364,6 +384,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/StarscreamSocketIO/StarscreamSocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -377,6 +398,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StarscreamSocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -401,18 +423,22 @@
 				7C0ACA0F1F3CA8B80085FA64 /* SignUpViewController.swift in Sources */,
 				7C0ACA0C1F3CA8B80085FA64 /* LaunchViewController.swift in Sources */,
 				7C0ACA0B1F3CA8B80085FA64 /* AuthenticationManager.swift in Sources */,
+				7CD32EE81F68F6E70099C7D6 /* Coin.swift in Sources */,
+				9DFD59401F6AA03F00B1493F /* CustomLogger.swift in Sources */,
 				9DFA438B1F3EEFEA00CF0860 /* Asset.swift in Sources */,
 				9DFA43BA1F3F716400CF0860 /* Constants.swift in Sources */,
 				9DFA43AD1F3F715800CF0860 /* ApiManager.swift in Sources */,
 				9DFA43AF1F3F715800CF0860 /* ServiceResponse.swift in Sources */,
 				7C0ACA0E1F3CA8B80085FA64 /* LoginViewController.swift in Sources */,
 				9DFA43C01F3F745E00CF0860 /* SummaryView.swift in Sources */,
+				9DFD593E1F6AA03600B1493F /* DateExtension.swift in Sources */,
 				9DFA439D1F3F61D900CF0860 /* MainViewController.swift in Sources */,
 				9DFA43BB1F3F716400CF0860 /* ColorsExtension.swift in Sources */,
 				9DFA438D1F3F124000CF0860 /* HoldingsViewController.swift in Sources */,
 				9DFA43BC1F3F716400CF0860 /* AssetTableViewCell.swift in Sources */,
 				9DFA43B11F3F715800CF0860 /* CryptoCompareService.swift in Sources */,
 				9DFA43B01F3F715800CF0860 /* ApiService.swift in Sources */,
+				9D386D211F63CA4B002C4C75 /* Database.swift in Sources */,
 				9DFA43891F3EEF6900CF0860 /* ParseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,6 +559,7 @@
 				INFOPLIST_FILE = Cryptfolio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = dev.christopher.Cryptfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -548,6 +575,7 @@
 				INFOPLIST_FILE = Cryptfolio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DRELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = dev.christopher.Cryptfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

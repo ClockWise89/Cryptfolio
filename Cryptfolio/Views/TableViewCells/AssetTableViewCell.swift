@@ -24,14 +24,14 @@ class AssetTableViewCell: UITableViewCell {
         // style
     }
     
-    func setup(asset: Asset) {
-        if let url = URL(string: Constants.Urls.imageUrl + asset.imageUrl) {
+    func setup(coin: Coin) {
+        if let url = URL(string: Constants.Urls.imageUrl + coin.imageUrl) {
             self.iconImageView.kf.setImage(with: url, options: [.transition(.fade(0.2))])
         } else {
             DDLogDebug("Could not create url from imageview")
         }
         
-        self.tickerLabel.text = asset.ticker
-        self.fullnameLabel.text = asset.fullname
+        self.tickerLabel.text = coin.ticker
+        self.fullnameLabel.text = coin.fullname
     }
 }
