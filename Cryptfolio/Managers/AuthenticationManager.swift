@@ -29,11 +29,11 @@ class AuthenticationManager {
         self.authHandle = self.auth.addStateDidChangeListener { (auth, user) in
             
             if user != nil {
-                DDLogDebug("User was successfully logged in.")
+                DDLogInfo("User was successfully logged in.")
                 callback?(true)
                 
             } else {
-                DDLogDebug("User is logged out.")
+                DDLogInfo("User was logged out.")
                 callback?(false)
             }
         }

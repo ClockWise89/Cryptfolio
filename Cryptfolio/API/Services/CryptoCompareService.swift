@@ -19,18 +19,18 @@ class CryptoCompareService{
         self.apiService = apiService
     }
     
-    func coinList() -> Promise<[Asset]> {
+    func coinList() -> Promise<[Coin]> {
         return Promise { fulfill, reject in
             self.apiService.baseRequest(method: .get, url: "/coinlist").then { response -> Void in
                 
-                var assets: [Asset] = []
+                var coins: [Coin] = []
                 if let json = response.json {
-                    assets = ParseManager.parseCoinList(json: json)
+                    coins = ParseManager.parseCoinList(json: json)
                 }
                 
-                DDLogDebug("Request fetched \(assets.count) objects")
+                DDLogDebug("Request fetched \(coins.count) objects")
                 
-                fulfill(assets)
+                fulfill(coins)
                 
                 }.catch { error in
                     reject(error)

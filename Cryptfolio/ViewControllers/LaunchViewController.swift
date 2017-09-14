@@ -18,7 +18,7 @@ class LaunchViewController: UIViewController {
         
         AuthenticationManager.shared.addStateListener() { (hasCurrentUser) in
             if hasCurrentUser {
-                self.performSegue(withIdentifier: "showLoggedIn", sender: nil)
+                self.performSegue(withIdentifier: "showMain", sender: nil)
             } else {
                 self.performSegue(withIdentifier: "showLogin", sender: nil)
             }

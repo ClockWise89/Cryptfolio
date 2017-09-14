@@ -7,22 +7,25 @@
 //
 
 import Foundation
+import SQLite
+
+enum AssetStatus {
+    case added
+    case deleted
+}
 
 class Asset {
     let id: Int
-    let overviewUrl: String
-    let imageUrl: String
     let ticker: String
     let name: String
     let fullname: String
+    let status: AssetStatus
     
-    
-    init(id: Int, overviewUrl: String, imageUrl: String, ticker: String, name: String, fullname: String) {
+    init(id: Int, ticker: String, name: String, fullname: String, status: AssetStatus) {
         self.id = id
-        self.overviewUrl = overviewUrl
-        self.imageUrl = imageUrl
         self.ticker = ticker
         self.name = name
         self.fullname = fullname
+        self.status = status
     }
 }
