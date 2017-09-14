@@ -12,10 +12,9 @@ import UIKit
 import SQLite
 
 enum DbError: Error {
-    case OpenData(message: String)
-    case Prepare(message: String)
-    case Step(message: String)
-    case Bind(message: String)
+    case openData(message: String)
+    case prepare(message: String)
+    case update(message: String)
 }
 
 enum DatabaseType {
@@ -39,13 +38,18 @@ class Database {
     fileprivate var assetConnection: SQLite.Connection!
     fileprivate var logConnection: SQLite.Connection!
     
+    // Refactor: 
+    // DatabaseService - Should be used the same way ApiService and ApiManager is used. So we have one DatabaseManager, 
+    // and a base DatabaseService, then one DatabaseConnection for each type of Database we want.
+    //
+    
     // Mark: Init
     public init() {
         do {
             try self.open(type: .asset)
             try self.open(type: .log)
             
-        } catch DbError.OpenData(let message) {
+        } catch DbError.openData(let message) {
             DDLogError(message)
         } catch {
             DDLogError("Unknown error opening database.") // Should never happen since we only throw one error in open()
@@ -70,11 +74,11 @@ class Database {
                 self.prepareModels(type: type)
                 
             } catch {
-                throw DbError.OpenData(message: error.localizedDescription)
+                throw DbError.openData(message: error.localizedDescription)
             }
             
         } else {
-            throw DbError.OpenData(message: "Database \(type.name) directory not found.")
+            throw DbError.openData(message: "Database \(type.name) directory not found.")
         }
     }
     
@@ -88,7 +92,7 @@ class Database {
                 try self.prepareLog()
             }
             
-        } catch DbError.Prepare(message: let message) {
+        } catch DbError.prepare(message: let message) {
             DDLogError("Error preparing model: \(message)")
         
         } catch {
@@ -126,7 +130,7 @@ class Database {
             DDLogInfo("Asset was prepared.")
             
         } catch {
-            throw DbError.Prepare(message: error.localizedDescription)
+            throw DbError.prepare(message: error.localizedDescription)
         }
     }
     
@@ -144,7 +148,29 @@ class Database {
             DDLogInfo("Log was prepared.")
             
         } catch {
-            throw DbError.Prepare(message: error.localizedDescription)
+            throw DbError.prepare(message: error.localizedDescription)
         }
     }
+    
+    func logToDatabase(timestamp: Double, message: String) throws {
+        do {
+            let logTable = Table("Log")
+            let t = Expression<Double>("timestamp")
+            let m = Expression<String>("message")
+            
+            try self.logConnection.run(logTable.insert(t <- timestamp, m <- message))
+            
+        } catch {
+            throw DbError.update(message: error.localizedDescription)
+        }
+    }
+
+
+
+
+
+
 }
+
+
+

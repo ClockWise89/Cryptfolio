@@ -27,6 +27,19 @@ class CustomLogger : NSObject, DDLogFormatter {
         default: logLevel = "[VERBOSE]"
         }
         
-        return "\(logMessage.timestamp) \(logLevel) - [\(logMessage.fileName)] [Line \(logMessage.line)]: \(logMessage.message)"
+        let message = "\(logLevel) - [\(logMessage.fileName)] [Line \(logMessage.line)]: \(logMessage.message)"
+        let timestamp = logMessage.timestamp.asDouble()
+        
+        
+        // Save to database
+        do {
+            try Database.shared.logToDatabase(timestamp: timestamp, message: message)
+        } catch DbError.update(message: let message) {
+            DDLogError("Unable to save log entry to database: \(message)")
+        } catch {
+            DDLogError("Unable to save log entry to database: \(error.localizedDescription)")
+        }
+        
+        return "\(logMessage.timestamp) \(message)"
     }
 }

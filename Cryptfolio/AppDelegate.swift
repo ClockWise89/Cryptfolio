@@ -33,8 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             DDLogDebug("User directory: \(path)")
         }
         
+        FirebaseConfiguration.shared.setLoggerLevel(.min) // Remove logging from firebase for the moment
         FirebaseApp.configure()
-        Database.shared // Initialize databases
+        let _ = Database.shared // Initialize databases
     
  
 
