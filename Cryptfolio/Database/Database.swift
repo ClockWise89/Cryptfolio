@@ -38,11 +38,6 @@ class Database {
     fileprivate var assetConnection: SQLite.Connection!
     fileprivate var logConnection: SQLite.Connection!
     
-    // Refactor: 
-    // DatabaseService - Should be used the same way ApiService and ApiManager is used. So we have one DatabaseManager, 
-    // and a base DatabaseService, then one DatabaseConnection for each type of Database we want.
-    //
-    
     // Mark: Init
     public init() {
         do {
@@ -164,13 +159,4 @@ class Database {
             throw DbError.update(message: error.localizedDescription)
         }
     }
-
-
-
-
-
-
 }
-
-
-

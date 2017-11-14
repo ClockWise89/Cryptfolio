@@ -11,7 +11,6 @@
 		7C0ACA0C1F3CA8B80085FA64 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA071F3CA8B80085FA64 /* LaunchViewController.swift */; };
 		7C0ACA0E1F3CA8B80085FA64 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA091F3CA8B80085FA64 /* LoginViewController.swift */; };
 		7C0ACA0F1F3CA8B80085FA64 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA0A1F3CA8B80085FA64 /* SignUpViewController.swift */; };
-		7CD32EE81F68F6E70099C7D6 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD32EE71F68F6E70099C7D6 /* Coin.swift */; };
 		8FCA4A51B21295B7E8727767 /* Pods_Cryptfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B724B25340132560932538 /* Pods_Cryptfolio.framework */; };
 		9D386D211F63CA4B002C4C75 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D386D201F63CA4B002C4C75 /* Database.swift */; };
 		9D3FCF721F3A18A400FBBB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */; };
@@ -19,7 +18,6 @@
 		9DEEBB291F3A1BB400CA0466 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DEEBB281F3A1BB400CA0466 /* GoogleService-Info.plist */; };
 		9DEEBB2B1F3A23DE00CA0466 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DEEBB2A1F3A23DE00CA0466 /* Main.storyboard */; };
 		9DFA43891F3EEF6900CF0860 /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43881F3EEF6900CF0860 /* ParseManager.swift */; };
-		9DFA438B1F3EEFEA00CF0860 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA438A1F3EEFEA00CF0860 /* Asset.swift */; };
 		9DFA438D1F3F124000CF0860 /* HoldingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA438C1F3F124000CF0860 /* HoldingsViewController.swift */; };
 		9DFA43911F3F143400CF0860 /* MarketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43901F3F143400CF0860 /* MarketTableViewController.swift */; };
 		9DFA43991F3F23C100CF0860 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43981F3F23C100CF0860 /* AccountViewController.swift */; };
@@ -39,6 +37,8 @@
 		9DFA43C61F3F7C9600CF0860 /* PortfolioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DFA43C41F3F7C9600CF0860 /* PortfolioTableViewCell.xib */; };
 		9DFD593E1F6AA03600B1493F /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFD593D1F6AA03600B1493F /* DateExtension.swift */; };
 		9DFD59401F6AA03F00B1493F /* CustomLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFD593F1F6AA03F00B1493F /* CustomLogger.swift */; };
+		9DFD59441F6AA28000B1493F /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFD59421F6AA28000B1493F /* Asset.swift */; };
+		9DFD59451F6AA28000B1493F /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFD59431F6AA28000B1493F /* Coin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +46,6 @@
 		7C0ACA071F3CA8B80085FA64 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		7C0ACA091F3CA8B80085FA64 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7C0ACA0A1F3CA8B80085FA64 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		7CD32EE71F68F6E70099C7D6 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = SOURCE_ROOT; };
 		85CBB6CEF5928E319F071390 /* Pods-Cryptfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptfolio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio.debug.xcconfig"; sourceTree = "<group>"; };
 		9D386D201F63CA4B002C4C75 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		9D3FCF671F3A18A400FBBB93 /* Cryptfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,7 +55,6 @@
 		9DEEBB281F3A1BB400CA0466 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9DEEBB2A1F3A23DE00CA0466 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9DFA43881F3EEF6900CF0860 /* ParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManager.swift; sourceTree = "<group>"; };
-		9DFA438A1F3EEFEA00CF0860 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Asset.swift; path = Cryptfolio/Managers/Asset.swift; sourceTree = SOURCE_ROOT; };
 		9DFA438C1F3F124000CF0860 /* HoldingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoldingsViewController.swift; sourceTree = "<group>"; };
 		9DFA43901F3F143400CF0860 /* MarketTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketTableViewController.swift; sourceTree = "<group>"; };
 		9DFA43981F3F23C100CF0860 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +74,8 @@
 		9DFA43C41F3F7C9600CF0860 /* PortfolioTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortfolioTableViewCell.xib; sourceTree = "<group>"; };
 		9DFD593D1F6AA03600B1493F /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		9DFD593F1F6AA03F00B1493F /* CustomLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLogger.swift; sourceTree = "<group>"; };
+		9DFD59421F6AA28000B1493F /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		9DFD59431F6AA28000B1493F /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		BAF4F148534DF5A0D4CE789A /* Pods-Cryptfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptfolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio.release.xcconfig"; sourceTree = "<group>"; };
 		D3B724B25340132560932538 /* Pods_Cryptfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -108,15 +108,6 @@
 				9DFA43881F3EEF6900CF0860 /* ParseManager.swift */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		7C0ACA051F3CA8B80085FA64 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				9DFA438A1F3EEFEA00CF0860 /* Asset.swift */,
-				7CD32EE71F68F6E70099C7D6 /* Coin.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		7C0ACA061F3CA8B80085FA64 /* ViewControllers */ = {
@@ -187,7 +178,7 @@
 				7C0ACA031F3CA8B80085FA64 /* Managers */,
 				9DFA43B21F3F716400CF0860 /* Config */,
 				9DFA43B41F3F716400CF0860 /* Extensions */,
-				7C0ACA051F3CA8B80085FA64 /* Models */,
+				9DFD59411F6AA28000B1493F /* Models */,
 				9DFA43B61F3F716400CF0860 /* Views */,
 				7C0ACA061F3CA8B80085FA64 /* ViewControllers */,
 				7C0ACA101F3CA8C20085FA64 /* SupportingFiles */,
@@ -260,6 +251,15 @@
 				9DFA43C11F3F746B00CF0860 /* SummaryView.xib */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9DFD59411F6AA28000B1493F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9DFD59421F6AA28000B1493F /* Asset.swift */,
+				9DFD59431F6AA28000B1493F /* Coin.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,10 +422,9 @@
 				9DFA43991F3F23C100CF0860 /* AccountViewController.swift in Sources */,
 				7C0ACA0F1F3CA8B80085FA64 /* SignUpViewController.swift in Sources */,
 				7C0ACA0C1F3CA8B80085FA64 /* LaunchViewController.swift in Sources */,
+				9DFD59451F6AA28000B1493F /* Coin.swift in Sources */,
 				7C0ACA0B1F3CA8B80085FA64 /* AuthenticationManager.swift in Sources */,
-				7CD32EE81F68F6E70099C7D6 /* Coin.swift in Sources */,
 				9DFD59401F6AA03F00B1493F /* CustomLogger.swift in Sources */,
-				9DFA438B1F3EEFEA00CF0860 /* Asset.swift in Sources */,
 				9DFA43BA1F3F716400CF0860 /* Constants.swift in Sources */,
 				9DFA43AD1F3F715800CF0860 /* ApiManager.swift in Sources */,
 				9DFA43AF1F3F715800CF0860 /* ServiceResponse.swift in Sources */,
@@ -437,6 +436,7 @@
 				9DFA438D1F3F124000CF0860 /* HoldingsViewController.swift in Sources */,
 				9DFA43BC1F3F716400CF0860 /* AssetTableViewCell.swift in Sources */,
 				9DFA43B11F3F715800CF0860 /* CryptoCompareService.swift in Sources */,
+				9DFD59441F6AA28000B1493F /* Asset.swift in Sources */,
 				9DFA43B01F3F715800CF0860 /* ApiService.swift in Sources */,
 				9D386D211F63CA4B002C4C75 /* Database.swift in Sources */,
 				9DFA43891F3EEF6900CF0860 /* ParseManager.swift in Sources */,

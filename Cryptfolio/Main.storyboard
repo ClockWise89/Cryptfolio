@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="awk-cR-I97">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="awk-cR-I97">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -52,7 +53,7 @@
             <objects>
                 <navigationController id="TR2-SO-Wbz" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="v5O-hM-cuu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -66,6 +67,7 @@
         <!--Login View Controller-->
         <scene sceneID="oyS-3U-Dh2">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PiH-ck-HoR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="8uW-l3-wVM" customClass="LoginViewController" customModule="Cryptfolio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x4p-iO-Gb6"/>
@@ -173,7 +175,6 @@
                         <segue destination="Q7F-0b-WzJ" kind="presentation" identifier="showMain" id="9g5-fS-RIC"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PiH-ck-HoR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1006" y="159"/>
         </scene>
@@ -317,6 +318,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="mCt-D9-3Wl">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t8W-in-eam" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="kg6-RF-8a3" customClass="SignUpViewController" customModule="Cryptfolio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GZN-Ms-esH"/>
@@ -327,19 +329,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rdm-rD-JSr">
-                                <rect key="frame" x="20" y="110" width="335" height="30"/>
+                                <rect key="frame" x="20" y="154" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oX6-qJ-8Ev">
-                                <rect key="frame" x="20" y="160" width="335" height="30"/>
+                                <rect key="frame" x="20" y="204" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SignupViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vs2-u3-SFt">
-                                <rect key="frame" x="87.5" y="300" width="200" height="21"/>
+                                <rect key="frame" x="87.5" y="344" width="200" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="EHs-vl-SvG"/>
                                     <constraint firstAttribute="width" constant="200" id="nWP-ci-U6I"/>
@@ -349,7 +351,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhR-MT-KCZ">
-                                <rect key="frame" x="147" y="210" width="80" height="40"/>
+                                <rect key="frame" x="147" y="254" width="80" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="f1j-jn-Ib5"/>
                                     <constraint firstAttribute="width" constant="80" id="oh1-Ub-HKV"/>
@@ -381,7 +383,6 @@
                         <segue destination="Q7F-0b-WzJ" kind="presentation" identifier="showMain" id="lD8-7c-W4S"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t8W-in-eam" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1006" y="-574"/>
         </scene>
