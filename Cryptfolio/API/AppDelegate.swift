@@ -16,6 +16,13 @@ import CocoaLumberjack
     let logLevel = DDLogLevel.info
 #endif
 
+/*
+ - Fix constraints in AssetTableViewCell and finish layout
+ - Remove nibs
+ - Go through code and comment and clean
+ 
+ */
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

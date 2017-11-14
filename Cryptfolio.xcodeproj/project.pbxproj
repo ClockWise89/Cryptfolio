@@ -27,8 +27,6 @@
 		9DFA43BB1F3F716400CF0860 /* ColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43B51F3F716400CF0860 /* ColorsExtension.swift */; };
 		9DFA43BC1F3F716400CF0860 /* AssetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43B81F3F716400CF0860 /* AssetTableViewCell.swift */; };
 		9DFA43BD1F3F716400CF0860 /* AssetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DFA43B91F3F716400CF0860 /* AssetTableViewCell.xib */; };
-		9DFA43C01F3F745E00CF0860 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43BF1F3F745E00CF0860 /* SummaryView.swift */; };
-		9DFA43C21F3F746B00CF0860 /* SummaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DFA43C11F3F746B00CF0860 /* SummaryView.xib */; };
 		9DFA43C51F3F7C9600CF0860 /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43C31F3F7C9600CF0860 /* PortfolioTableViewCell.swift */; };
 		9DFA43C61F3F7C9600CF0860 /* PortfolioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DFA43C41F3F7C9600CF0860 /* PortfolioTableViewCell.xib */; };
 		9DFD593E1F6AA03600B1493F /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFD593D1F6AA03600B1493F /* DateExtension.swift */; };
@@ -60,8 +58,6 @@
 		9DFA43B51F3F716400CF0860 /* ColorsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsExtension.swift; sourceTree = "<group>"; };
 		9DFA43B81F3F716400CF0860 /* AssetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTableViewCell.swift; sourceTree = "<group>"; };
 		9DFA43B91F3F716400CF0860 /* AssetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetTableViewCell.xib; sourceTree = "<group>"; };
-		9DFA43BF1F3F745E00CF0860 /* SummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
-		9DFA43C11F3F746B00CF0860 /* SummaryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummaryView.xib; sourceTree = "<group>"; };
 		9DFA43C31F3F7C9600CF0860 /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewCell.swift; sourceTree = "<group>"; };
 		9DFA43C41F3F7C9600CF0860 /* PortfolioTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortfolioTableViewCell.xib; sourceTree = "<group>"; };
 		9DFD593D1F6AA03600B1493F /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
@@ -235,8 +231,6 @@
 		9DFA43BE1F3F743400CF0860 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				9DFA43BF1F3F745E00CF0860 /* SummaryView.swift */,
-				9DFA43C11F3F746B00CF0860 /* SummaryView.xib */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -318,7 +312,6 @@
 				9DEEBB291F3A1BB400CA0466 /* GoogleService-Info.plist in Resources */,
 				9D3FCF721F3A18A400FBBB93 /* Assets.xcassets in Resources */,
 				9DFA43C61F3F7C9600CF0860 /* PortfolioTableViewCell.xib in Resources */,
-				9DFA43C21F3F746B00CF0860 /* SummaryView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +408,6 @@
 				9DFA43BA1F3F716400CF0860 /* Constants.swift in Sources */,
 				9DFA43AD1F3F715800CF0860 /* ApiManager.swift in Sources */,
 				9DFA43AF1F3F715800CF0860 /* ServiceResponse.swift in Sources */,
-				9DFA43C01F3F745E00CF0860 /* SummaryView.swift in Sources */,
 				9DFD593E1F6AA03600B1493F /* DateExtension.swift in Sources */,
 				9DFA439D1F3F61D900CF0860 /* MainViewController.swift in Sources */,
 				9DFA43BB1F3F716400CF0860 /* ColorsExtension.swift in Sources */,

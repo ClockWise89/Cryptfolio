@@ -15,7 +15,7 @@ class MarketTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.contentInset = UIEdgeInsets(top: UIApplication.shared.statusBarFrame.size.height, left: 0, bottom: 0, right: 0) // Adjust for the status bar
-        self.tableView.register(AssetTableViewCell.getNib(), forCellReuseIdentifier: Constants.Cells.asset)
+        self.tableView.register(AssetTableViewCell.self, forCellReuseIdentifier: Constants.Cells.asset)
         self.fetchCoins()
     }
     
@@ -45,9 +45,14 @@ extension MarketTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.Cells.asset, for: indexPath) as! AssetTableViewCell
-        cell.setup(coin: self.coins[indexPath.row])
+        if let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.Cells.asset, for: indexPath) as? AssetTableViewCell {
+            cell.setup(coin: self.coins[indexPath.row])
+            return cell
         
-        return cell
+        } else {
+            let cell = AssetTableViewCell(style: .default, reuseIdentifier: Constants.Cells.asset)
+            cell.setup(coin: self.coins[indexPath.row])
+            return cell
+        }
     }
 }

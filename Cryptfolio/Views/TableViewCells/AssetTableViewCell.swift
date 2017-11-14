@@ -9,15 +9,41 @@
 import UIKit
 import Kingfisher
 import CocoaLumberjack
+import PureLayout
 
 class AssetTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var tickerLabel: UILabel!
-    @IBOutlet weak var fullnameLabel: UILabel!
+    var iconImageView: UIImageView!
+    var tickerLabel: UILabel!
+    var fullnameLabel: UILabel!
 
-    class func getNib() -> UINib {
-        return UINib(nibName: "AssetTableViewCell", bundle: nil)
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        self.iconImageView = UIImageView()
+        self.addSubview(self.iconImageView)
+        
+        self.iconImageView.autoPinEdge(toSuperviewMargin: .left)
+        self.iconImageView.autoPinEdge(toSuperviewMargin: .top)
+        self.iconImageView.autoSetDimensions(to: CGSize(width: 30.0, height: 30.0))
+        
+        self.tickerLabel = UILabel()
+        self.addSubview(self.tickerLabel)
+        
+        self.tickerLabel.autoPinEdge(toSuperviewMargin: .bottom)
+        self.tickerLabel.autoPinEdge(.left, to: .left, of: self, withOffset: 8)
+        self.tickerLabel.autoPinEdge(.top, to: .bottom, of: self.iconImageView, withOffset: 2.0)
+        self.tickerLabel.autoAlignAxis(.horizontal, toSameAxisOf: self.iconImageView)
+        self.tickerLabel.autoSetDimension(.width, toSize: 40.0)
+        self.tickerLabel.autoSetDimension(.height, toSize: 14.5)
+        
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        DDLogDebug("Init(coder:) has not been implemented")
+        fatalError("init(coder:) has not been implemented")
     }
     
     private func style() {
@@ -32,6 +58,6 @@ class AssetTableViewCell: UITableViewCell {
         }
         
         self.tickerLabel.text = coin.ticker
-        self.fullnameLabel.text = coin.fullname
+        //self.fullnameLabel.text = coin.fullname
     }
 }
