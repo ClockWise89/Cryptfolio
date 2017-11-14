@@ -7,33 +7,40 @@
 //
 
 import UIKit
+import PureLayout
 
 class HoldingsViewController: UIViewController {
-
-    @IBOutlet weak var leftSummaryView: SummaryView!
-    @IBOutlet weak var rightSummaryView: SummaryView!
-    @IBOutlet weak var portfolioTableView: UITableView!
+    var portfolioTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupViews()
         self.style()
         self.portfolioTableView.register(PortfolioTableViewCell.getNib(), forCellReuseIdentifier: Constants.Cells.portfolio)
         self.portfolioTableView.delegate = self
         self.portfolioTableView.dataSource = self
     }
     
+    private func setupViews() {
+        // Setup tableView
+        self.portfolioTableView = UITableView()
+        self.portfolioTableView.delegate = self
+        self.portfolioTableView.dataSource = self
+        self.view.addSubview(self.portfolioTableView);
+        
+        // Setup constraints for tableView
+        self.portfolioTableView.autoPinEdgesToSuperviewEdges()
+    }
+    
     private func style() {
         self.view.backgroundColor = UIColor.cfColor(.mineShaft)
-        
-        // Temporary
-        self.leftSummaryView.style(shouldBePercentage: true)
-        self.rightSummaryView.style(shouldBePercentage: false)
-        
         self.portfolioTableView.layer.cornerRadius = 5.0
         self.portfolioTableView.clipsToBounds = true
     }
 }
 
+
+// MARK: - UITableViewDelegate and UITableViewDataSource
 extension HoldingsViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
