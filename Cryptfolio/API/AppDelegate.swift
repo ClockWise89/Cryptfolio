@@ -17,9 +17,8 @@ import CocoaLumberjack
 #endif
 
 /*
- - Fix constraints in AssetTableViewCell and finish layout
- - Remove nibs
- - Go through code and comment and clean
+ - Start working with handling portfolios and transactions.
+ - Add on transaction level, where user chooses asset and inputs data
  
  */
 
