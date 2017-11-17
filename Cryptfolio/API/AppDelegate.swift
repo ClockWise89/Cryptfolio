@@ -16,6 +16,13 @@ import CocoaLumberjack
     let logLevel = DDLogLevel.info
 #endif
 
+/*
+ - Fix constraints in AssetTableViewCell and finish layout
+ - Remove nibs
+ - Go through code and comment and clean
+ 
+ */
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -35,9 +42,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseConfiguration.shared.setLoggerLevel(.min) // Remove logging from firebase for the moment
         FirebaseApp.configure()
+        DDLogDebug("Firebase is configured.")
+        
         let _ = Database.shared // Initialize databases
-    
- 
+        
+        // Setup intial ViewController
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let mvc = MainViewController()
+        let nvc = UINavigationController(rootViewController: mvc)
+        window?.rootViewController = nvc
+        window?.makeKeyAndVisible()
 
         return true
     }

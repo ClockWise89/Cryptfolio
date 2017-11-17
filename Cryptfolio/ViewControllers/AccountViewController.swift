@@ -15,9 +15,8 @@ class AccountViewController: UIViewController {
     }
 
     @IBAction func pressedLogout(_ sender: Any) {
-        AuthenticationManager.shared.signOut() { (success) in
-            self.performSegue(withIdentifier: "showLogin", sender: self)
-        }
-        
+//        AuthenticationManager.shared.signOut() { (success) in
+//            self.performSegue(withIdentifier: "showLogin", sender: self)
+//        }        
     }
 }

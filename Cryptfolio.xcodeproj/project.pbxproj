@@ -7,16 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C0ACA0B1F3CA8B80085FA64 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA041F3CA8B80085FA64 /* AuthenticationManager.swift */; };
-		7C0ACA0C1F3CA8B80085FA64 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA071F3CA8B80085FA64 /* LaunchViewController.swift */; };
-		7C0ACA0E1F3CA8B80085FA64 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA091F3CA8B80085FA64 /* LoginViewController.swift */; };
-		7C0ACA0F1F3CA8B80085FA64 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA0A1F3CA8B80085FA64 /* SignUpViewController.swift */; };
 		8FCA4A51B21295B7E8727767 /* Pods_Cryptfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B724B25340132560932538 /* Pods_Cryptfolio.framework */; };
 		9D386D211F63CA4B002C4C75 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D386D201F63CA4B002C4C75 /* Database.swift */; };
 		9D3FCF721F3A18A400FBBB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */; };
 		9D3FCF751F3A18A400FBBB93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF731F3A18A400FBBB93 /* LaunchScreen.storyboard */; };
 		9DEEBB291F3A1BB400CA0466 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DEEBB281F3A1BB400CA0466 /* GoogleService-Info.plist */; };
-		9DEEBB2B1F3A23DE00CA0466 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DEEBB2A1F3A23DE00CA0466 /* Main.storyboard */; };
 		9DFA43891F3EEF6900CF0860 /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43881F3EEF6900CF0860 /* ParseManager.swift */; };
 		9DFA438D1F3F124000CF0860 /* HoldingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA438C1F3F124000CF0860 /* HoldingsViewController.swift */; };
 		9DFA43911F3F143400CF0860 /* MarketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43901F3F143400CF0860 /* MarketTableViewController.swift */; };
@@ -30,11 +25,6 @@
 		9DFA43BA1F3F716400CF0860 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43B31F3F716400CF0860 /* Constants.swift */; };
 		9DFA43BB1F3F716400CF0860 /* ColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43B51F3F716400CF0860 /* ColorsExtension.swift */; };
 		9DFA43BC1F3F716400CF0860 /* AssetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43B81F3F716400CF0860 /* AssetTableViewCell.swift */; };
-		9DFA43BD1F3F716400CF0860 /* AssetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DFA43B91F3F716400CF0860 /* AssetTableViewCell.xib */; };
-		9DFA43C01F3F745E00CF0860 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43BF1F3F745E00CF0860 /* SummaryView.swift */; };
-		9DFA43C21F3F746B00CF0860 /* SummaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DFA43C11F3F746B00CF0860 /* SummaryView.xib */; };
-		9DFA43C51F3F7C9600CF0860 /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43C31F3F7C9600CF0860 /* PortfolioTableViewCell.swift */; };
-		9DFA43C61F3F7C9600CF0860 /* PortfolioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DFA43C41F3F7C9600CF0860 /* PortfolioTableViewCell.xib */; };
 		9DFD593E1F6AA03600B1493F /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFD593D1F6AA03600B1493F /* DateExtension.swift */; };
 		9DFD59401F6AA03F00B1493F /* CustomLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFD593F1F6AA03F00B1493F /* CustomLogger.swift */; };
 		9DFD59441F6AA28000B1493F /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFD59421F6AA28000B1493F /* Asset.swift */; };
@@ -42,10 +32,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7C0ACA041F3CA8B80085FA64 /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
-		7C0ACA071F3CA8B80085FA64 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
-		7C0ACA091F3CA8B80085FA64 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		7C0ACA0A1F3CA8B80085FA64 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		85CBB6CEF5928E319F071390 /* Pods-Cryptfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptfolio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio.debug.xcconfig"; sourceTree = "<group>"; };
 		9D386D201F63CA4B002C4C75 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		9D3FCF671F3A18A400FBBB93 /* Cryptfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,7 +39,6 @@
 		9D3FCF741F3A18A400FBBB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D3FCF761F3A18A400FBBB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DEEBB281F3A1BB400CA0466 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		9DEEBB2A1F3A23DE00CA0466 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9DFA43881F3EEF6900CF0860 /* ParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManager.swift; sourceTree = "<group>"; };
 		9DFA438C1F3F124000CF0860 /* HoldingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoldingsViewController.swift; sourceTree = "<group>"; };
 		9DFA43901F3F143400CF0860 /* MarketTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketTableViewController.swift; sourceTree = "<group>"; };
@@ -67,11 +52,6 @@
 		9DFA43B31F3F716400CF0860 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9DFA43B51F3F716400CF0860 /* ColorsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsExtension.swift; sourceTree = "<group>"; };
 		9DFA43B81F3F716400CF0860 /* AssetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTableViewCell.swift; sourceTree = "<group>"; };
-		9DFA43B91F3F716400CF0860 /* AssetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetTableViewCell.xib; sourceTree = "<group>"; };
-		9DFA43BF1F3F745E00CF0860 /* SummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
-		9DFA43C11F3F746B00CF0860 /* SummaryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummaryView.xib; sourceTree = "<group>"; };
-		9DFA43C31F3F7C9600CF0860 /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewCell.swift; sourceTree = "<group>"; };
-		9DFA43C41F3F7C9600CF0860 /* PortfolioTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortfolioTableViewCell.xib; sourceTree = "<group>"; };
 		9DFD593D1F6AA03600B1493F /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		9DFD593F1F6AA03F00B1493F /* CustomLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLogger.swift; sourceTree = "<group>"; };
 		9DFD59421F6AA28000B1493F /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
@@ -104,7 +84,6 @@
 		7C0ACA031F3CA8B80085FA64 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				7C0ACA041F3CA8B80085FA64 /* AuthenticationManager.swift */,
 				9DFA43881F3EEF6900CF0860 /* ParseManager.swift */,
 			);
 			path = Managers;
@@ -113,9 +92,6 @@
 		7C0ACA061F3CA8B80085FA64 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7C0ACA071F3CA8B80085FA64 /* LaunchViewController.swift */,
-				7C0ACA091F3CA8B80085FA64 /* LoginViewController.swift */,
-				7C0ACA0A1F3CA8B80085FA64 /* SignUpViewController.swift */,
 				9DFA438C1F3F124000CF0860 /* HoldingsViewController.swift */,
 				9DFA43901F3F143400CF0860 /* MarketTableViewController.swift */,
 				9DFA43981F3F23C100CF0860 /* AccountViewController.swift */,
@@ -131,7 +107,6 @@
 				9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */,
 				9D3FCF731F3A18A400FBBB93 /* LaunchScreen.storyboard */,
 				9D3FCF761F3A18A400FBBB93 /* Info.plist */,
-				9DEEBB2A1F3A23DE00CA0466 /* Main.storyboard */,
 			);
 			name = SupportingFiles;
 			sourceTree = "<group>";
@@ -237,9 +212,6 @@
 			isa = PBXGroup;
 			children = (
 				9DFA43B81F3F716400CF0860 /* AssetTableViewCell.swift */,
-				9DFA43B91F3F716400CF0860 /* AssetTableViewCell.xib */,
-				9DFA43C31F3F7C9600CF0860 /* PortfolioTableViewCell.swift */,
-				9DFA43C41F3F7C9600CF0860 /* PortfolioTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -247,8 +219,6 @@
 		9DFA43BE1F3F743400CF0860 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				9DFA43BF1F3F745E00CF0860 /* SummaryView.swift */,
-				9DFA43C11F3F746B00CF0860 /* SummaryView.xib */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -325,13 +295,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DFA43BD1F3F716400CF0860 /* AssetTableViewCell.xib in Resources */,
 				9D3FCF751F3A18A400FBBB93 /* LaunchScreen.storyboard in Resources */,
 				9DEEBB291F3A1BB400CA0466 /* GoogleService-Info.plist in Resources */,
 				9D3FCF721F3A18A400FBBB93 /* Assets.xcassets in Resources */,
-				9DFA43C61F3F7C9600CF0860 /* PortfolioTableViewCell.xib in Resources */,
-				9DEEBB2B1F3A23DE00CA0466 /* Main.storyboard in Resources */,
-				9DFA43C21F3F746B00CF0860 /* SummaryView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +350,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/StarscreamSocketIO/StarscreamSocketIO.framework",
@@ -398,6 +365,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StarscreamSocketIO.framework",
@@ -416,20 +384,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DFA43C51F3F7C9600CF0860 /* PortfolioTableViewCell.swift in Sources */,
 				9DFA43AE1F3F715800CF0860 /* AppDelegate.swift in Sources */,
 				9DFA43911F3F143400CF0860 /* MarketTableViewController.swift in Sources */,
 				9DFA43991F3F23C100CF0860 /* AccountViewController.swift in Sources */,
-				7C0ACA0F1F3CA8B80085FA64 /* SignUpViewController.swift in Sources */,
-				7C0ACA0C1F3CA8B80085FA64 /* LaunchViewController.swift in Sources */,
 				9DFD59451F6AA28000B1493F /* Coin.swift in Sources */,
-				7C0ACA0B1F3CA8B80085FA64 /* AuthenticationManager.swift in Sources */,
 				9DFD59401F6AA03F00B1493F /* CustomLogger.swift in Sources */,
 				9DFA43BA1F3F716400CF0860 /* Constants.swift in Sources */,
 				9DFA43AD1F3F715800CF0860 /* ApiManager.swift in Sources */,
 				9DFA43AF1F3F715800CF0860 /* ServiceResponse.swift in Sources */,
-				7C0ACA0E1F3CA8B80085FA64 /* LoginViewController.swift in Sources */,
-				9DFA43C01F3F745E00CF0860 /* SummaryView.swift in Sources */,
 				9DFD593E1F6AA03600B1493F /* DateExtension.swift in Sources */,
 				9DFA439D1F3F61D900CF0860 /* MainViewController.swift in Sources */,
 				9DFA43BB1F3F716400CF0860 /* ColorsExtension.swift in Sources */,

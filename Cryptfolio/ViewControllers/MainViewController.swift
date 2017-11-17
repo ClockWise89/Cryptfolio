@@ -14,8 +14,20 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.setupViewControllers()
         self.styleTabBar()
         self.setupTabBar()
+    }
+    
+    private func setupViewControllers() {
+        let firstVc = HoldingsViewController()
+        self.addChildViewController(firstVc)
+        
+        let secondVc = MarketTableViewController()
+        self.addChildViewController(secondVc)
+        
+        let thirdVc = AccountViewController()
+        self.addChildViewController(thirdVc)
     }
 
     private func styleTabBar() {
