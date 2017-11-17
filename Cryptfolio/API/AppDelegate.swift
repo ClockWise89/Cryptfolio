@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseConfiguration.shared.setLoggerLevel(.min) // Remove logging from firebase for the moment
         FirebaseApp.configure()
-        DDLogInfo("Firebase is configured.")
+        DDLogDebug("Firebase is configured.")
         
         let _ = Database.shared // Initialize databases
         
