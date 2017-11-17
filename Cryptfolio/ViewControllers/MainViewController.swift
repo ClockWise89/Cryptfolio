@@ -37,17 +37,13 @@ class MainViewController: UITabBarController {
     }
     
     private func setupTabBar() {
-        guard let items = self.tabBar.items else {
-            DDLogDebug("There are no items in tabbar at setup.")
-            return
-        }
         
         var activeImage = UIImage()
         var inactiveImage = UIImage()
         var title = ""
         
-        for (index, item) in (items).enumerated() {
-            
+        for (index, vc) in self.childViewControllers.enumerated() {
+            let item = UITabBarItem()
             switch index {
             case 0:
                 activeImage = UIImage(named: "iconPortfolioActive")!
@@ -68,6 +64,7 @@ class MainViewController: UITabBarController {
             item.image = inactiveImage.withRenderingMode(.alwaysOriginal)
             item.selectedImage = activeImage.withRenderingMode(.alwaysOriginal)
             item.title = title
+            vc.tabBarItem = item
         }
     }
 }

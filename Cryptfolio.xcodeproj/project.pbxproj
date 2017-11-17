@@ -203,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				9DFA43B71F3F716400CF0860 /* TableViewCells */,
-				9DFA43BE1F3F743400CF0860 /* ViewModels */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,13 +213,6 @@
 				9DFA43B81F3F716400CF0860 /* AssetTableViewCell.swift */,
 			);
 			path = TableViewCells;
-			sourceTree = "<group>";
-		};
-		9DFA43BE1F3F743400CF0860 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		9DFD59411F6AA28000B1493F /* Models */ = {
