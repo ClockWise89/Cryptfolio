@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C0ACA0B1F3CA8B80085FA64 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACA041F3CA8B80085FA64 /* AuthenticationManager.swift */; };
 		8FCA4A51B21295B7E8727767 /* Pods_Cryptfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B724B25340132560932538 /* Pods_Cryptfolio.framework */; };
 		9D386D211F63CA4B002C4C75 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D386D201F63CA4B002C4C75 /* Database.swift */; };
 		9D3FCF721F3A18A400FBBB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */; };
@@ -33,7 +32,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7C0ACA041F3CA8B80085FA64 /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		85CBB6CEF5928E319F071390 /* Pods-Cryptfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptfolio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio.debug.xcconfig"; sourceTree = "<group>"; };
 		9D386D201F63CA4B002C4C75 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		9D3FCF671F3A18A400FBBB93 /* Cryptfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,7 +84,6 @@
 		7C0ACA031F3CA8B80085FA64 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				7C0ACA041F3CA8B80085FA64 /* AuthenticationManager.swift */,
 				9DFA43881F3EEF6900CF0860 /* ParseManager.swift */,
 			);
 			path = Managers;
@@ -391,7 +388,6 @@
 				9DFA43911F3F143400CF0860 /* MarketTableViewController.swift in Sources */,
 				9DFA43991F3F23C100CF0860 /* AccountViewController.swift in Sources */,
 				9DFD59451F6AA28000B1493F /* Coin.swift in Sources */,
-				7C0ACA0B1F3CA8B80085FA64 /* AuthenticationManager.swift in Sources */,
 				9DFD59401F6AA03F00B1493F /* CustomLogger.swift in Sources */,
 				9DFA43BA1F3F716400CF0860 /* Constants.swift in Sources */,
 				9DFA43AD1F3F715800CF0860 /* ApiManager.swift in Sources */,
