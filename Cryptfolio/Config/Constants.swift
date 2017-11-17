@@ -15,6 +15,5 @@ public struct Constants {
     
     public struct Cells {
         static let asset = "AssetTableViewCell"
-        static let portfolio = "PortfolioTableViewCell"
     }
 }

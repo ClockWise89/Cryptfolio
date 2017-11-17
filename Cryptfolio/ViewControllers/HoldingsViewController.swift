@@ -16,7 +16,7 @@ class HoldingsViewController: UIViewController {
         super.viewDidLoad()
         self.setupViews()
         self.style()
-        self.portfolioTableView.register(PortfolioTableViewCell.getNib(), forCellReuseIdentifier: Constants.Cells.portfolio)
+
         self.portfolioTableView.delegate = self
         self.portfolioTableView.dataSource = self
     }
@@ -55,9 +55,6 @@ extension HoldingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cells.portfolio, for: indexPath) as! PortfolioTableViewCell
-        cell.setup(number: indexPath.row)
-        
-        return cell
+        return UITableViewCell()
     }
 }

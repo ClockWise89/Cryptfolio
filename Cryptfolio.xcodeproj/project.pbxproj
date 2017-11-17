@@ -26,9 +26,6 @@
 		9DFA43BA1F3F716400CF0860 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43B31F3F716400CF0860 /* Constants.swift */; };
 		9DFA43BB1F3F716400CF0860 /* ColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43B51F3F716400CF0860 /* ColorsExtension.swift */; };
 		9DFA43BC1F3F716400CF0860 /* AssetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43B81F3F716400CF0860 /* AssetTableViewCell.swift */; };
-		9DFA43BD1F3F716400CF0860 /* AssetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DFA43B91F3F716400CF0860 /* AssetTableViewCell.xib */; };
-		9DFA43C51F3F7C9600CF0860 /* PortfolioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43C31F3F7C9600CF0860 /* PortfolioTableViewCell.swift */; };
-		9DFA43C61F3F7C9600CF0860 /* PortfolioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DFA43C41F3F7C9600CF0860 /* PortfolioTableViewCell.xib */; };
 		9DFD593E1F6AA03600B1493F /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFD593D1F6AA03600B1493F /* DateExtension.swift */; };
 		9DFD59401F6AA03F00B1493F /* CustomLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFD593F1F6AA03F00B1493F /* CustomLogger.swift */; };
 		9DFD59441F6AA28000B1493F /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFD59421F6AA28000B1493F /* Asset.swift */; };
@@ -57,9 +54,6 @@
 		9DFA43B31F3F716400CF0860 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9DFA43B51F3F716400CF0860 /* ColorsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsExtension.swift; sourceTree = "<group>"; };
 		9DFA43B81F3F716400CF0860 /* AssetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTableViewCell.swift; sourceTree = "<group>"; };
-		9DFA43B91F3F716400CF0860 /* AssetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetTableViewCell.xib; sourceTree = "<group>"; };
-		9DFA43C31F3F7C9600CF0860 /* PortfolioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewCell.swift; sourceTree = "<group>"; };
-		9DFA43C41F3F7C9600CF0860 /* PortfolioTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortfolioTableViewCell.xib; sourceTree = "<group>"; };
 		9DFD593D1F6AA03600B1493F /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		9DFD593F1F6AA03F00B1493F /* CustomLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLogger.swift; sourceTree = "<group>"; };
 		9DFD59421F6AA28000B1493F /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
@@ -221,9 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				9DFA43B81F3F716400CF0860 /* AssetTableViewCell.swift */,
-				9DFA43B91F3F716400CF0860 /* AssetTableViewCell.xib */,
-				9DFA43C31F3F7C9600CF0860 /* PortfolioTableViewCell.swift */,
-				9DFA43C41F3F7C9600CF0860 /* PortfolioTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -307,11 +298,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DFA43BD1F3F716400CF0860 /* AssetTableViewCell.xib in Resources */,
 				9D3FCF751F3A18A400FBBB93 /* LaunchScreen.storyboard in Resources */,
 				9DEEBB291F3A1BB400CA0466 /* GoogleService-Info.plist in Resources */,
 				9D3FCF721F3A18A400FBBB93 /* Assets.xcassets in Resources */,
-				9DFA43C61F3F7C9600CF0860 /* PortfolioTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,7 +387,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DFA43C51F3F7C9600CF0860 /* PortfolioTableViewCell.swift in Sources */,
 				9DFA43AE1F3F715800CF0860 /* AppDelegate.swift in Sources */,
 				9DFA43911F3F143400CF0860 /* MarketTableViewController.swift in Sources */,
 				9DFA43991F3F23C100CF0860 /* AccountViewController.swift in Sources */,
