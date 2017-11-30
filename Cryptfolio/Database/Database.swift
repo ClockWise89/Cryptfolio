@@ -18,15 +18,13 @@ enum DbError: Error {
 }
 
 enum DatabaseType {
-    case asset
+    case cryptofolio
     case log
     
     var name: String {
         switch self {
-        case .asset:
-            return "asset.sqlite3"
-        case .log:
-            return "log.sqlite3"
+        case .log: return "log.sqlite3"
+        default: return "cryptfolio.sqlite3"
         }
     }
 }
@@ -35,13 +33,13 @@ enum DatabaseType {
 class Database {
     
     static let shared = Database()
-    fileprivate var assetConnection: SQLite.Connection!
+    fileprivate var cryptfolioConnection: SQLite.Connection!
     fileprivate var logConnection: SQLite.Connection!
     
     // Mark: Init
     public init() {
         do {
-            try self.open(type: .asset)
+            try self.open(type: .cryptofolio)
             try self.open(type: .log)
             
         } catch DbError.openData(let message) {
@@ -58,11 +56,10 @@ class Database {
             do {
                 let db = try Connection("\(path)/\(type.name)")
                 
-                switch type {
-                case .asset:
-                    self.assetConnection = db
-                case .log:
+                if (type == .log) {
                     self.logConnection = db
+                } else {
+                    self.cryptfolioConnection = db
                 }
                 
                 DDLogInfo("Database \(type.name) was successfully opened.")
@@ -80,11 +77,10 @@ class Database {
     fileprivate func prepareModels(type: DatabaseType) {
         do {
             
-            switch type {
-            case .asset:
-                try self.prepareAsset()
-            case .log:
+            if (type == .log) {
                 try self.prepareLog()
+            } else {
+                try self.prepareAsset()
             }
             
         } catch DbError.prepare(message: let message) {
@@ -98,7 +94,10 @@ class Database {
     fileprivate func prepareAsset() throws {
         do {
             let assets = Table("Asset")
-            try self.assetConnection.run(assets.create(ifNotExists: true) { t in
+            let portfolio = Table("Portfolio")
+            
+            try self.cryptfolioConnection.run(assets.create(ifNotExists: true) { t in
+                
                 let id = Expression<Int64>("id")
                 let ticker = Expression<String>("ticker")
                 let name = Expression<String>("name")
@@ -110,7 +109,7 @@ class Database {
                 let lastEdited = Expression<Double>("timestampLastEdited")
                 let status = Expression<Int64>("status")
                 
-                t.column(id, primaryKey: .autoincrement)
+                t.column(id, primaryKey: true)
                 t.column(ticker, defaultValue: "Unknown")
                 t.column(name, defaultValue: "Unknown")
                 t.column(fullname, defaultValue: "Unknown")
@@ -123,6 +122,25 @@ class Database {
             })
             
             DDLogInfo("Asset was prepared.")
+            
+            try self.cryptfolioConnection.run(portfolio.create(ifNotExists: true) { t in
+                
+                let id = Expression<Int64>("id")
+                let name = Expression<String>("name")
+                let balance = Expression<Double>("balance") // Maybe not needed
+                let timestampAdded = Expression<Double>("timestampAdded")
+                let timestampRemoved = Expression<Double>("timestampRemoved")
+                let lastEdited = Expression<Double>("timestampLastEdited")
+                
+                t.column(id, primaryKey: true)
+                t.column(name, defaultValue: "Unknown")
+                t.column(balance, defaultValue: 0.0)
+                t.column(timestampAdded, defaultValue: 0.0)
+                t.column(timestampRemoved, defaultValue: 0.0)
+                t.column(lastEdited, defaultValue: 0.0)
+            })
+            
+            DDLogInfo("Portolio was prepared.")
             
         } catch {
             throw DbError.prepare(message: error.localizedDescription)
