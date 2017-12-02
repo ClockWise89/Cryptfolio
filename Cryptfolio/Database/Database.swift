@@ -97,35 +97,17 @@ class Database {
     
     fileprivate func prepareAsset() throws {
         do {
-            let asset = Table("Asset")
-            
-            try self.cryptfolioConnection.run(asset.create(ifNotExists: true) { t in
-                
-                let id = Expression<Int64>("id")
-                let apiId = Expression<Int64>("apiId")
-                let ticker = Expression<String>("ticker")
-                let name = Expression<String>("name")
-                let fullname = Expression<String>("fullname")
-                
-                t.column(id, primaryKey: true)
-                t.column(apiId, defaultValue: 0)
-                t.column(ticker, defaultValue: "Unknown")
-                t.column(name, defaultValue: "Unknown")
-                t.column(fullname, defaultValue: "Unknown")
-            })
-            
+            try self.cryptfolioConnection.run("create table if not exists 'Asset' ('id' integer primary key not null, 'apiId' integer not null default (-1), 'ticker' text not null default ('unknown'), 'name' text not null default ('unknown'), 'fullname' text not null default ('unknown'))")
             DDLogDebug("Asset table was prepared.")
             
-        } catch {
-            throw DbError.prepare(message: "Asset: \(error.localizedDescription)")
+        } catch let Result.error(message: message, code: _, statement: _) {
+            throw DbError.prepare(message: "Asset: \(message)")
         }
     }
     
     func prepareTransaction() throws {
         do {
-        
             try self.cryptfolioConnection.run("create table if not exists 'transaction' ('id' integer primary key not null, 'assetId' integer not null default(-1), 'timestamp' real not null default (0.0), 'type' text not null default ('unknown'), 'fromAddress' text not null default ('unknown'), 'toAddress' text not null default ('unknown'), 'amount' real not null default (0.0))")
-            
             DDLogDebug("Transaction table was prepared.")
             
         } catch let Result.error(message: message, code: _, statement: _) {
@@ -135,15 +117,7 @@ class Database {
     
     fileprivate func prepareLog() throws {
         do {
-            let log = Table("Log")
-            try self.logConnection.run(log.create(ifNotExists: true) { t in
-                let timestamp = Expression<Double>("timestamp")
-                let message = Expression<String>("message")
-                
-                t.column(timestamp, primaryKey: true)
-                t.column(message)
-            })
-            
+            try self.logConnection.run("create table if not exists 'log' ('timestamp' real primary key not null, 'message' text not null)")
             DDLogDebug("Log table was prepared.")
             
         } catch let Result.error(message: message, code: _, statement: _){
