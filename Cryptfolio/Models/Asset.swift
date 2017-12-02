@@ -12,41 +12,32 @@ import CocoaLumberjack
 
 class Asset {
     let id: Int64
-    let apiId: Int64
     let ticker: String
     let name: String
     let fullname: String
     
-    fileprivate init(id: Int64, apiId: Int64, ticker: String, name: String, fullname: String) {
+    fileprivate init(id: Int64, ticker: String, name: String, fullname: String) {
         self.id = id
-        self.apiId = apiId
         self.ticker = ticker
         self.name = name
         self.fullname = fullname
     }
     
-    static func AddAssetToDB(apiId: Int64, ticker: String, name: String, fullname: String) -> Asset? {
+    static func AddAssetToDB(id: Int64, ticker: String, name: String, fullname: String) throws -> Asset? {
         guard let db = Database.shared.fetchConnection(type: .cryptofolio) else {
             DDLogWarn("Attempted to save Asset to Database: Database connection is nil!")
             return nil
         }
         
-        // TODO: CHECK IF THE ASSET ALREADY EXISTS!!! IF IT DOES, RETURN OR UPDATE?!
-        
         do {
-            let table = Table("Asset")
-            let db_api_id = Expression<Int64>("apiId")
-            let db_ticker = Expression<String>("ticker")
-            let db_name = Expression<String>("name")
-            let db_fullname = Expression<String>("fullname")
+            let query = "insert or replace into 'asset' ('id', 'ticker', 'name', 'fullname') values (\(id), '\(ticker)', '\(name)', '\(fullname)')"
+            try db.run(query)
+            DDLogDebug("Asset with id \(db.lastInsertRowid) was added or updated successfully.")
             
-            let rowId = try db.run(table.insert(db_api_id <- apiId, db_ticker <- ticker, db_name <- name, db_fullname <- fullname))
-            DDLogInfo("Asset with id \(rowId) was added to database successfully.")
+            return Asset(id: id, ticker: ticker, name: name, fullname: fullname)
             
-            return Asset(id: rowId, apiId: apiId, ticker: ticker, name: name, fullname: fullname)
-            
-        } catch {
-            DDLogError("Unable to add asset to database: \(error.localizedDescription)")
+        } catch let Result.error(message: message, code: _, statement: _) {
+            DDLogError("Unable to add asset: \(message)")
             return nil
         }
     }
@@ -78,14 +69,13 @@ class Asset {
         do {
             let table = Table("Asset")
             let db_id = Expression<Int64>("id")
-            let db_api_id = Expression<Int64>("apiId")
             let db_ticker = Expression<String>("ticker")
             let db_name = Expression<String>("name")
             let db_fullname = Expression<String>("fullname")
             
             var asset: Asset?
-            for a in try db.prepare(table.where(db_api_id == apiId)) {
-                asset = Asset(id: a[db_id], apiId: a[db_api_id], ticker: a[db_ticker], name: a[db_name], fullname: a[db_fullname])
+            for a in try db.prepare(table.where(db_id == apiId)) {
+                asset = Asset(id: a[db_id], ticker: a[db_ticker], name: a[db_name], fullname: a[db_fullname])
             }
             
             if (asset != nil) {

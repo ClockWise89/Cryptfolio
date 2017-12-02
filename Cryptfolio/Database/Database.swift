@@ -97,7 +97,7 @@ class Database {
     
     fileprivate func prepareAsset() throws {
         do {
-            let query = "create table if not exists 'Asset' ('id' integer primary key not null, 'apiId' integer not null default (-1), 'ticker' text not null default ('unknown'), 'name' text not null default ('unknown'), 'fullname' text not null default ('unknown'))"
+            let query = "create table if not exists 'Asset' ('id' integer primary key not null, 'ticker' text not null default ('unknown'), 'name' text not null default ('unknown'), 'fullname' text not null default ('unknown'))"
             try self.cryptfolioConnection.run(query)
             DDLogDebug("Asset table was prepared.")
             
