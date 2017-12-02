@@ -97,7 +97,8 @@ class Database {
     
     fileprivate func prepareAsset() throws {
         do {
-            try self.cryptfolioConnection.run("create table if not exists 'Asset' ('id' integer primary key not null, 'apiId' integer not null default (-1), 'ticker' text not null default ('unknown'), 'name' text not null default ('unknown'), 'fullname' text not null default ('unknown'))")
+            let query = "create table if not exists 'Asset' ('id' integer primary key not null, 'apiId' integer not null default (-1), 'ticker' text not null default ('unknown'), 'name' text not null default ('unknown'), 'fullname' text not null default ('unknown'))"
+            try self.cryptfolioConnection.run(query)
             DDLogDebug("Asset table was prepared.")
             
         } catch let Result.error(message: message, code: _, statement: _) {
@@ -107,7 +108,8 @@ class Database {
     
     func prepareTransaction() throws {
         do {
-            try self.cryptfolioConnection.run("create table if not exists 'transaction' ('id' integer primary key not null, 'assetId' integer not null default(-1), 'timestamp' real not null default (0.0), 'type' text not null default ('unknown'), 'fromAddress' text not null default ('unknown'), 'toAddress' text not null default ('unknown'), 'amount' real not null default (0.0))")
+            let query = "create table if not exists 'transaction' ('id' integer primary key not null, 'assetId' integer not null default(-1), 'timestamp' real not null default (0.0), 'type' text not null default ('unknown'), 'fromAddress' text not null default ('unknown'), 'toAddress' text not null default ('unknown'), 'amount' real not null default (0.0))"
+            try self.cryptfolioConnection.run(query)
             DDLogDebug("Transaction table was prepared.")
             
         } catch let Result.error(message: message, code: _, statement: _) {
@@ -117,7 +119,8 @@ class Database {
     
     fileprivate func prepareLog() throws {
         do {
-            try self.logConnection.run("create table if not exists 'log' ('timestamp' real primary key not null, 'message' text not null)")
+            let query = "create table if not exists 'log' ('timestamp' real primary key not null, 'message' text not null)"
+            try self.logConnection.run(query)
             DDLogDebug("Log table was prepared.")
             
         } catch let Result.error(message: message, code: _, statement: _){
@@ -127,11 +130,8 @@ class Database {
     
     func logToDatabase(timestamp: Double, message: String) throws {
         do {
-            let logTable = Table("Log")
-            let db_timestamp = Expression<Double>("timestamp")
-            let db_message = Expression<String>("message")
-            
-            try self.logConnection.run(logTable.insert(db_timestamp <- timestamp, db_message <- message))
+            let query = "insert into 'log' ('timestamp', 'message') values (\(timestamp), '\(message)')"
+            try self.logConnection.run(query)
             
         } catch let Result.error(message: message, code: _, statement: _) {
             throw DbError.update(message: message)
