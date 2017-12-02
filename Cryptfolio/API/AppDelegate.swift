@@ -52,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = nvc
         window?.makeKeyAndVisible()
         
-//        if let asset = Asset.AddAssetToDB(ticker: "BTC", name: "Bitcoin", fullname: "Bitcoin BTC"), let _ = Transaction.AddTransactionToDB(asset: asset, timestamp: Date().asDouble(), type: .createdByUser, fromAddress: "0x8w710s+8s8281jsi92", toAddress: "01x0129s7ah281u8sj18", amount: 0.2183) {
+//        if let asset = Asset.AddAssetToDB(apiId: 131079, ticker: "BTC", name: "Bitcoin", fullname: "Bitcoin BTC"), let _ = Transaction.AddTransactionToDB(asset: asset, timestamp: Date().asDouble(), type: .createdByUser, fromAddress: "0x8w710s+8s8281jsi92", toAddress: "01x0129s7ah281u8sj18", amount: 0.2183) {
 //
 //            var test = 0;
 //        }

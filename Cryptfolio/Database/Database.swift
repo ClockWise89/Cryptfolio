@@ -90,8 +90,8 @@ class Database {
         } catch DbError.prepare(message: let message) {
             DDLogError("Error preparing model \(message)")
         
-        } catch let Result.error(message: message, code: _, statement: _){
-            DDLogError(message)
+        } catch {
+            DDLogError(error.localizedDescription)
         }
     }
     
@@ -116,15 +116,15 @@ class Database {
             
             DDLogDebug("Asset table was prepared.")
             
-        } catch let Result.error(message: message, code: _, statement: _){
-            throw DbError.prepare(message: "Asset: \(message)")
+        } catch {
+            throw DbError.prepare(message: "Asset: \(error.localizedDescription)")
         }
     }
     
     func prepareTransaction() throws {
         do {
         
-            try self.cryptfolioConnection.run("create table 'transaction' if not exists ('id' integer primary key not null, 'assetId' integer not null default(-1), 'timestamp' real not null default (0.0), 'type' text not null default ('unknown'), 'fromAddress' text not null default ('unknown'), 'toAddress' text not null default ('unknown'), 'amount' real not null default (0.0))")
+            try self.cryptfolioConnection.run("create table if not exists 'transaction' ('id' integer primary key not null, 'assetId' integer not null default(-1), 'timestamp' real not null default (0.0), 'type' text not null default ('unknown'), 'fromAddress' text not null default ('unknown'), 'toAddress' text not null default ('unknown'), 'amount' real not null default (0.0))")
             
             DDLogDebug("Transaction table was prepared.")
             
