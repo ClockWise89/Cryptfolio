@@ -62,7 +62,7 @@ class Database {
                     self.cryptfolioConnection = db
                 }
                 
-                DDLogInfo("Database \(type.name) was successfully opened.")
+                DDLogDebug("Database \(type.name) was successfully opened.")
                 self.prepareModels(type: type)
                 
             } catch {
@@ -81,6 +81,7 @@ class Database {
                 try self.prepareLog()
             } else {
                 try self.prepareAsset()
+                try self.prepareTransaction()
             }
             
         } catch DbError.prepare(message: let message) {
@@ -93,54 +94,54 @@ class Database {
     
     fileprivate func prepareAsset() throws {
         do {
-            let assets = Table("Asset")
-            let portfolio = Table("Portfolio")
+            let asset = Table("Asset")
             
-            try self.cryptfolioConnection.run(assets.create(ifNotExists: true) { t in
+            try self.cryptfolioConnection.run(asset.create(ifNotExists: true) { t in
                 
                 let id = Expression<Int64>("id")
+                let apiId = Expression<Int64>("apiId")
                 let ticker = Expression<String>("ticker")
                 let name = Expression<String>("name")
                 let fullname = Expression<String>("fullname")
-                let balance = Expression<Double>("balance")
-                let lastPrice = Expression<Double>("lastPrice")
-                let timestampAdded = Expression<Double>("timestampAdded")
-                let timestampRemoved = Expression<Double>("timestampRemoved")
-                let lastEdited = Expression<Double>("timestampLastEdited")
-                let status = Expression<Int64>("status")
                 
                 t.column(id, primaryKey: true)
+                t.column(apiId, defaultValue: 0)
                 t.column(ticker, defaultValue: "Unknown")
                 t.column(name, defaultValue: "Unknown")
                 t.column(fullname, defaultValue: "Unknown")
-                t.column(balance, defaultValue: 0.0)
-                t.column(lastPrice, defaultValue: 0.0)
-                t.column(timestampAdded, defaultValue: 0.0)
-                t.column(timestampRemoved, defaultValue: 0.0)
-                t.column(lastEdited, defaultValue: 0.0)
-                t.column(status, defaultValue: 0)
             })
             
-            DDLogInfo("Asset was prepared.")
+            DDLogDebug("Asset table was prepared.")
             
-            try self.cryptfolioConnection.run(portfolio.create(ifNotExists: true) { t in
+        } catch {
+            throw DbError.prepare(message: error.localizedDescription)
+        }
+    }
+    
+    fileprivate func prepareTransaction() throws {
+        do {
+            let transaction = Table("Transaction")
+            
+            try self.cryptfolioConnection.run(transaction.create(ifNotExists: true) { t in
                 
                 let id = Expression<Int64>("id")
-                let name = Expression<String>("name")
-                let balance = Expression<Double>("balance") // Maybe not needed
-                let timestampAdded = Expression<Double>("timestampAdded")
-                let timestampRemoved = Expression<Double>("timestampRemoved")
-                let lastEdited = Expression<Double>("timestampLastEdited")
+                let assetId = Expression<Int64>("assetId")
+                let timestamp = Expression<Double>("timestamp")
+                let type = Expression<String>("type")
+                let fromAddress = Expression<String>("fromAddress")
+                let toAddress = Expression<String>("toAddress")
+                let amount = Expression<Double>("amount")
                 
                 t.column(id, primaryKey: true)
-                t.column(name, defaultValue: "Unknown")
-                t.column(balance, defaultValue: 0.0)
-                t.column(timestampAdded, defaultValue: 0.0)
-                t.column(timestampRemoved, defaultValue: 0.0)
-                t.column(lastEdited, defaultValue: 0.0)
+                t.column(assetId, defaultValue: -1)
+                t.column(timestamp, defaultValue: 0.0)
+                t.column(type, defaultValue: "Unknown")
+                t.column(fromAddress, defaultValue: "")
+                t.column(toAddress, defaultValue: "")
+                t.column(amount, defaultValue: 0.0)
             })
             
-            DDLogInfo("Portolio was prepared.")
+            DDLogDebug("Transaction table was prepared.")
             
         } catch {
             throw DbError.prepare(message: error.localizedDescription)
@@ -158,7 +159,7 @@ class Database {
                 t.column(message)
             })
             
-            DDLogInfo("Log was prepared.")
+            DDLogDebug("Log table was prepared.")
             
         } catch {
             throw DbError.prepare(message: error.localizedDescription)
@@ -168,13 +169,21 @@ class Database {
     func logToDatabase(timestamp: Double, message: String) throws {
         do {
             let logTable = Table("Log")
-            let t = Expression<Double>("timestamp")
-            let m = Expression<String>("message")
+            let db_timestamp = Expression<Double>("timestamp")
+            let db_message = Expression<String>("message")
             
-            try self.logConnection.run(logTable.insert(t <- timestamp, m <- message))
+            try self.logConnection.run(logTable.insert(db_timestamp <- timestamp, db_message <- message))
             
         } catch {
             throw DbError.update(message: error.localizedDescription)
         }
+    }
+    
+    func fetchConnection(type: DatabaseType) -> Connection? {
+        if type == .cryptofolio {
+            return self.cryptfolioConnection
+        }
+        
+        return nil
     }
 }

@@ -14,9 +14,11 @@ class ParseManager {
 
     static func parseCoinList(json: JSON) -> [Coin] {
         var coins: [Coin] = []
+        DDLogVerbose(json.description)
+        
         for (_, coinObject) in json["Data"] {
             
-            let id = coinObject["Id"].intValue
+            let id = coinObject["Id"].int64Value
             let overviewUrl = coinObject["Url"].stringValue
             let imageUrl = coinObject["ImageUrl"].stringValue
             let ticker = coinObject["Name"].stringValue

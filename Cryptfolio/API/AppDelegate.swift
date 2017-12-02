@@ -11,7 +11,7 @@ import Firebase
 import CocoaLumberjack
 
 #if DEBUG
-    let logLevel = DDLogLevel.debug
+    let logLevel = DDLogLevel.verbose
 #else
     let logLevel = DDLogLevel.info
 #endif
@@ -51,7 +51,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nvc = UINavigationController(rootViewController: mvc)
         window?.rootViewController = nvc
         window?.makeKeyAndVisible()
+        
+//        if let asset = Asset.AddAssetToDB(ticker: "BTC", name: "Bitcoin", fullname: "Bitcoin BTC"), let _ = Transaction.AddTransactionToDB(asset: asset, timestamp: Date().asDouble(), type: .createdByUser, fromAddress: "0x8w710s+8s8281jsi92", toAddress: "01x0129s7ah281u8sj18", amount: 0.2183) {
+//
+//            var test = 0;
+//        }
 
+        //let asset = Asset.fetchAssetByApiId(apiId: 131079)
+        Asset.apiIdExists(apiId: 131079)
         return true
     }
 

@@ -11,7 +11,7 @@ import Foundation
 class ApiManager {
     
     static let shared = ApiManager()
-    static let baseURL = "https://www.cryptocompare.com/api/data"
+    static let baseURL = "https://min-api.cryptocompare.com/data/all"
     
     let apiService: ApiService
     let cryptoCompareService: CryptoCompareService

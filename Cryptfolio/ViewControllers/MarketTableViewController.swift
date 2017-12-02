@@ -24,6 +24,10 @@ class MarketTableViewController: UITableViewController {
             self.coins = coins
             self.tableView.reloadData()
             
+            for coin in self.coins {
+                //Asset.AddAssetToDB(apiId: coin.id, ticker: coin.ticker, name: coin.name, fullname: coin.fullname)
+            }
+            
             }.catch{ error in
                 // Handle error
         }

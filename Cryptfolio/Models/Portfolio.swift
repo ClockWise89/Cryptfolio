@@ -11,11 +11,15 @@ import Foundation
 class Portfolio {
     let id: Int
     var name: String
-    var assets: [Asset]
+    var transactions: [Transaction]
     
-    init(id: Int, name: String, assets: [Asset] ) {
+    init(id: Int, name: String, transactions: [Transaction] ) {
         self.id = id
         self.name = name
-        self.assets = assets
+        self.transactions = transactions
+    }
+    
+    static func Build() {
+        // Use this to build from database maybe
     }
 }

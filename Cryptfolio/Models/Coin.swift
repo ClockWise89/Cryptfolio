@@ -9,7 +9,7 @@
 import Foundation
 
 class Coin {
-    let id: Int
+    let id: Int64
     let overviewUrl: String
     let imageUrl: String
     let ticker: String
@@ -17,7 +17,7 @@ class Coin {
     let fullname: String
     
     
-    init(id: Int, overviewUrl: String, imageUrl: String, ticker: String, name: String, fullname: String) {
+    init(id: Int64, overviewUrl: String, imageUrl: String, ticker: String, name: String, fullname: String) {
         self.id = id
         self.overviewUrl = overviewUrl
         self.imageUrl = imageUrl

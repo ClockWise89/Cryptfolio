@@ -12,6 +12,8 @@
 		9D3FCF721F3A18A400FBBB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF711F3A18A400FBBB93 /* Assets.xcassets */; };
 		9D3FCF751F3A18A400FBBB93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FCF731F3A18A400FBBB93 /* LaunchScreen.storyboard */; };
 		9D9D51C21FD075470028498F /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9D51C11FD075470028498F /* Portfolio.swift */; };
+		9D9D51C41FD1EFE10028498F /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9D51C31FD1EFE10028498F /* Transaction.swift */; };
+		9DE233041FD20FC500E69857 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE233031FD20FC500E69857 /* Coin.swift */; };
 		9DEEBB291F3A1BB400CA0466 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DEEBB281F3A1BB400CA0466 /* GoogleService-Info.plist */; };
 		9DFA43891F3EEF6900CF0860 /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA43881F3EEF6900CF0860 /* ParseManager.swift */; };
 		9DFA438D1F3F124000CF0860 /* HoldingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA438C1F3F124000CF0860 /* HoldingsViewController.swift */; };
@@ -29,7 +31,6 @@
 		9DFD593E1F6AA03600B1493F /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFD593D1F6AA03600B1493F /* DateExtension.swift */; };
 		9DFD59401F6AA03F00B1493F /* CustomLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFD593F1F6AA03F00B1493F /* CustomLogger.swift */; };
 		9DFD59441F6AA28000B1493F /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFD59421F6AA28000B1493F /* Asset.swift */; };
-		9DFD59451F6AA28000B1493F /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFD59431F6AA28000B1493F /* Coin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		9D3FCF741F3A18A400FBBB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D3FCF761F3A18A400FBBB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D9D51C11FD075470028498F /* Portfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
+		9D9D51C31FD1EFE10028498F /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		9DE233031FD20FC500E69857 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		9DEEBB281F3A1BB400CA0466 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9DFA43881F3EEF6900CF0860 /* ParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManager.swift; sourceTree = "<group>"; };
 		9DFA438C1F3F124000CF0860 /* HoldingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoldingsViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +60,6 @@
 		9DFD593D1F6AA03600B1493F /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		9DFD593F1F6AA03F00B1493F /* CustomLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLogger.swift; sourceTree = "<group>"; };
 		9DFD59421F6AA28000B1493F /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
-		9DFD59431F6AA28000B1493F /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		BAF4F148534DF5A0D4CE789A /* Pods-Cryptfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptfolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cryptfolio/Pods-Cryptfolio.release.xcconfig"; sourceTree = "<group>"; };
 		D3B724B25340132560932538 /* Pods_Cryptfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -220,9 +222,10 @@
 		9DFD59411F6AA28000B1493F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9DE233031FD20FC500E69857 /* Coin.swift */,
 				9DFD59421F6AA28000B1493F /* Asset.swift */,
-				9DFD59431F6AA28000B1493F /* Coin.swift */,
 				9D9D51C11FD075470028498F /* Portfolio.swift */,
+				9D9D51C31FD1EFE10028498F /* Transaction.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -382,7 +385,6 @@
 				9DFA43AE1F3F715800CF0860 /* AppDelegate.swift in Sources */,
 				9DFA43911F3F143400CF0860 /* MarketTableViewController.swift in Sources */,
 				9DFA43991F3F23C100CF0860 /* AccountViewController.swift in Sources */,
-				9DFD59451F6AA28000B1493F /* Coin.swift in Sources */,
 				9DFD59401F6AA03F00B1493F /* CustomLogger.swift in Sources */,
 				9DFA43BA1F3F716400CF0860 /* Constants.swift in Sources */,
 				9DFA43AD1F3F715800CF0860 /* ApiManager.swift in Sources */,
@@ -393,10 +395,12 @@
 				9DFA438D1F3F124000CF0860 /* HoldingsViewController.swift in Sources */,
 				9D9D51C21FD075470028498F /* Portfolio.swift in Sources */,
 				9DFA43BC1F3F716400CF0860 /* AssetTableViewCell.swift in Sources */,
+				9D9D51C41FD1EFE10028498F /* Transaction.swift in Sources */,
 				9DFA43B11F3F715800CF0860 /* CryptoCompareService.swift in Sources */,
 				9DFD59441F6AA28000B1493F /* Asset.swift in Sources */,
 				9DFA43B01F3F715800CF0860 /* ApiService.swift in Sources */,
 				9D386D211F63CA4B002C4C75 /* Database.swift in Sources */,
+				9DE233041FD20FC500E69857 /* Coin.swift in Sources */,
 				9DFA43891F3EEF6900CF0860 /* ParseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
