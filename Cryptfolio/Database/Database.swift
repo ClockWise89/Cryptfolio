@@ -38,14 +38,17 @@ class Database {
     
     // Mark: Init
     public init() {
-        do {
-            try self.open(type: .cryptofolio)
-            try self.open(type: .log)
-            
-        } catch DbError.openData(let message) {
-            DDLogError(message)
-        } catch {
-            DDLogError("Unknown error opening database.") // Should never happen since we only throw one error in open()
+        let serialQueue = DispatchQueue(label: "serialDatabaseOpen")
+        serialQueue.async { // We need to run this sequentially or we might not be setup in the logger for errors
+            do {
+                try self.open(type: .log)
+                try self.open(type: .cryptofolio)
+    
+            } catch DbError.openData(let message) {
+                DDLogError(message)
+            } catch {
+                DDLogError("Unknown error opening database.") // Should never happen since we only throw one error in open()
+            }
         }
     }
     
@@ -65,8 +68,8 @@ class Database {
                 DDLogDebug("Database \(type.name) was successfully opened.")
                 self.prepareModels(type: type)
                 
-            } catch {
-                throw DbError.openData(message: error.localizedDescription)
+            } catch let Result.error(message: message, code: _, statement: _) {
+                throw DbError.openData(message: message)
             }
             
         } else {
@@ -85,10 +88,10 @@ class Database {
             }
             
         } catch DbError.prepare(message: let message) {
-            DDLogError("Error preparing model: \(message)")
+            DDLogError("Error preparing model \(message)")
         
-        } catch {
-            DDLogError(error.localizedDescription)
+        } catch let Result.error(message: message, code: _, statement: _){
+            DDLogError(message)
         }
     }
     
@@ -113,19 +116,20 @@ class Database {
             
             DDLogDebug("Asset table was prepared.")
             
-        } catch {
-            throw DbError.prepare(message: error.localizedDescription)
+        } catch let Result.error(message: message, code: _, statement: _){
+            throw DbError.prepare(message: "Asset: \(message)")
         }
     }
     
-    fileprivate func prepareTransaction() throws {
+    func prepareTransaction() throws {
         do {
-            try self.cryptfolioConnection.run("create table 'transaction' ('id' integer primary key not null, 'assetId' integer not null default(-1), 'timestamp' real not null default (0.0), 'type' text not null default ('unknown'), 'fromAddress' text not null default ('unknown'), 'toAddress' text not null default ('unknown'), 'amount' real not null default (0.0))")
+        
+            try self.cryptfolioConnection.run("create table 'transaction' if not exists ('id' integer primary key not null, 'assetId' integer not null default(-1), 'timestamp' real not null default (0.0), 'type' text not null default ('unknown'), 'fromAddress' text not null default ('unknown'), 'toAddress' text not null default ('unknown'), 'amount' real not null default (0.0))")
             
             DDLogDebug("Transaction table was prepared.")
             
-        } catch {
-            throw DbError.prepare(message: error.localizedDescription)
+        } catch let Result.error(message: message, code: _, statement: _) {
+            throw DbError.prepare(message: "Transaction: \(message)")
         }
     }
     
@@ -142,8 +146,8 @@ class Database {
             
             DDLogDebug("Log table was prepared.")
             
-        } catch {
-            throw DbError.prepare(message: error.localizedDescription)
+        } catch let Result.error(message: message, code: _, statement: _){
+            throw DbError.prepare(message: "Log: \(message)")
         }
     }
     
@@ -155,8 +159,8 @@ class Database {
             
             try self.logConnection.run(logTable.insert(db_timestamp <- timestamp, db_message <- message))
             
-        } catch {
-            throw DbError.update(message: error.localizedDescription)
+        } catch let Result.error(message: message, code: _, statement: _) {
+            throw DbError.update(message: message)
         }
     }
     

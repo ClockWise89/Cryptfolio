@@ -46,9 +46,9 @@ class CustomLogger : NSObject, DDLogFormatter {
             do {
                 try Database.shared.logToDatabase(timestamp: timestamp, message: message)
             } catch DbError.update(message: let message) {
-                DDLogError("Unable to save log entry to database: \(message)")
+                return "Unable to save log entry to database: \(message)"
             } catch {
-                DDLogError("Unable to save log entry to database: \(error.localizedDescription)")
+                return "Unable to save log entry to database: \(error.localizedDescription)"
             }
         }
         
