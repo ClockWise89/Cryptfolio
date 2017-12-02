@@ -120,26 +120,7 @@ class Database {
     
     fileprivate func prepareTransaction() throws {
         do {
-            let transaction = Table("Transaction")
-            
-            try self.cryptfolioConnection.run(transaction.create(ifNotExists: true) { t in
-                
-                let id = Expression<Int64>("id")
-                let assetId = Expression<Int64>("assetId")
-                let timestamp = Expression<Double>("timestamp")
-                let type = Expression<String>("type")
-                let fromAddress = Expression<String>("fromAddress")
-                let toAddress = Expression<String>("toAddress")
-                let amount = Expression<Double>("amount")
-                
-                t.column(id, primaryKey: true)
-                t.column(assetId, defaultValue: -1)
-                t.column(timestamp, defaultValue: 0.0)
-                t.column(type, defaultValue: "Unknown")
-                t.column(fromAddress, defaultValue: "")
-                t.column(toAddress, defaultValue: "")
-                t.column(amount, defaultValue: 0.0)
-            })
+            try self.cryptfolioConnection.run("create table 'transaction' ('id' integer primary key not null, 'assetId' integer not null default(-1), 'timestamp' real not null default (0.0), 'type' text not null default ('unknown'), 'fromAddress' text not null default ('unknown'), 'toAddress' text not null default ('unknown'), 'amount' real not null default (0.0))")
             
             DDLogDebug("Transaction table was prepared.")
             
