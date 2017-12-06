@@ -50,14 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nvc = UINavigationController(rootViewController: mvc)
         window?.rootViewController = nvc
         window?.makeKeyAndVisible()
-        
-        if let asset = try! Asset.AddAssetToDB(id: 131079, ticker: "BTC", name: "betcoin", fullname: "Bitcoin BTC") {
-            
-            var test = 0;
-        }
 
-        //let asset = Asset.fetchAssetByApiId(apiId: 131079)
-        Asset.apiIdExists(apiId: 131079)
+        let asset = Asset.fetchAssetById(id: 131079)
         return true
     }
 

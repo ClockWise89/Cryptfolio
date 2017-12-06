@@ -60,32 +60,45 @@ class Asset {
         }
     }
     
-    static func fetchAssetByApiId(apiId: Int64) -> Asset? {
+    static fileprivate func createAsset(s: Statement) -> Asset? {
+
+        var id: Int64 = -1
+        var ticker: String = ""
+        var name: String = ""
+        var fullname: String = ""
+
+        for row in s {
+            for (index, cn) in s.columnNames.enumerated() {
+                if cn == "id", let t = row[index] as? Int64 { id = t }
+                if cn == "ticker", let t = row[index] as? String { ticker = t }
+                if cn == "name", let t = row[index] as? String { name = t }
+                if cn == "fullname", let t = row[index] as? String { fullname = t }
+            }
+        }
+
+        return Asset(id: id, ticker: ticker, name: name, fullname: fullname)
+    }
+    
+    static func fetchAssetById(id: Int64) -> Asset? {
         guard let db = Database.shared.fetchConnection(type: .cryptofolio) else {
-            DDLogWarn("Attempted to fetch Asset with apiId \(apiId): Database connection is nil!")
+            DDLogWarn("Attempted to fetch Asset with apiId \(id): Database connection is nil!")
             return nil
         }
         
         do {
-            let table = Table("Asset")
-            let db_id = Expression<Int64>("id")
-            let db_ticker = Expression<String>("ticker")
-            let db_name = Expression<String>("name")
-            let db_fullname = Expression<String>("fullname")
             
-            var asset: Asset?
-            for a in try db.prepare(table.where(db_id == apiId)) {
-                asset = Asset(id: a[db_id], ticker: a[db_ticker], name: a[db_name], fullname: a[db_fullname])
-            }
+            let query = "select * from 'asset' where id==\(id) limit 1"
+            let statement = try db.run(query)
+            let asset = Asset.createAsset(s: statement)
             
-            if (asset != nil) {
-                DDLogDebug("Found asset with id \(apiId)")
-            }
+            if (asset != nil) { DDLogDebug("Found asset with id \(id)") }
             
             return asset
             
+        } catch let Result.error(message: message, code: _, statement: _) {
+            DDLogError("Unable to fetch asset from database: \(message)")
+            return nil
         } catch {
-            DDLogError("Unable to fetch asset from database: \(error.localizedDescription)")
             return nil
         }
     }
